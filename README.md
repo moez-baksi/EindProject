@@ -1,5 +1,6 @@
-Pokémon# Catch all Pokémon!
-### Throwback to the Google-Maps Event in September 2016.
+#Pokémon 
+#Catch all Pokémon!
+##### Throwback to the Google-Maps Event in September 2016.
 ## This app lets you catch Pokémon all over the world.
 ## Problem tackling with this app: Too much time.
 ## Targeted audience: Bored People who likes Pokémon
@@ -24,4 +25,4 @@ Pokémon# Catch all Pokémon!
 
   Home screen of the app      |  Press start might lead to:
   :-------------------------:|:-------------------------:
-  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_1.png)  |  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_2.png)
+  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_2.png)  |  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_1.png)
