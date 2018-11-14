@@ -4,9 +4,6 @@ Pokémon# Catch all Pokémon!
 ## Problem tackling with this app: Too much time.
 ## Targeted audience: Bored People who likes Pokémon
 * MVP:
-  * Will use at least two API's:
-    * https://pokeapi.co
-    * https://cloud.google.com/maps-platform/
   * Will contain the original 150 Pokémon
   * Three screens:
     * Start screen
@@ -18,7 +15,13 @@ Pokémon# Catch all Pokémon!
   * The general idea is that the Pokémon will always be on the same spot, so Pikachu will always be on science park
   * Maybe a reset button
   * Not sure if the locations will be hard coded or random (Pokémon might appear in the sea?)
+* Data source?? A database of the Pokémon locations
+* Will use at least two API's:
+  * https://pokeapi.co
+  * https://cloud.google.com/maps-platform/
+* Hardest part: I think it will be retrieving a map and pinning the locations
+* Similar apps: Google did the same thing in September 2016.
 
-  Home screen of the app      |  Search Pikachu
+  Home screen of the app      |  Press start might lead to:
   :-------------------------:|:-------------------------:
   ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_1.png)  |  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_2.png)
