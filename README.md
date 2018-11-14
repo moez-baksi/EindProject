@@ -18,3 +18,7 @@ Pokémon# Catch all Pokémon!
   * The general idea is that the Pokémon will always be on the same spot, so Pikachu will always be on science park
   * Maybe a reset button
   * Not sure if the locations will be hard coded or random (Pokémon might appear in the sea?)
+
+  Home screen of the app      |  Search Pikachu
+  :-------------------------:|:-------------------------:
+  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_1.png)  |  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_2.png)
