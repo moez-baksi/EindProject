@@ -1,5 +1,5 @@
-##Pokémon 
-##Catch all Pokémon!
+## Pokémon 
+## Catch all Pokémon!
 ##### Throwback to the Google-Maps Event in September 2016.
 ## This app lets you catch Pokémon all over the world.
 ## Problem tackling with this app: Too much time.
