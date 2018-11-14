@@ -1,5 +1,5 @@
-#Pokémon 
-#Catch all Pokémon!
+##Pokémon 
+##Catch all Pokémon!
 ##### Throwback to the Google-Maps Event in September 2016.
 ## This app lets you catch Pokémon all over the world.
 ## Problem tackling with this app: Too much time.
@@ -13,7 +13,7 @@
   * You can catch a Pokémon by tapping on it
   * Pokémon will always be on the same spot
 * Optional
-  * The general idea is that the Pokémon will always be on the same spot, so Pikachu will always be on science park
+  * The general idea is that the Pokémon will always be on the same spot, so Pikachu will always be on science park, then another possible idea would be to generate random locations if the app is opened. 
   * Maybe a reset button
   * Not sure if the locations will be hard coded or random (Pokémon might appear in the sea?)
 * Data source?? A database of the Pokémon locations
