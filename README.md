@@ -1,9 +1,10 @@
-## Pokémon 
-#### Catch all Pokémon!
+## Pokémon Time Trial
+#### Try to catch as much Pokémon as possible within the time limit!
 ##### Throwback to the Google-Maps Event in September 2016, with some modifications.
-#### This app lets you catch Pokémon in a specfic area within a specified time limit.
-#### Problem tackling: A possible treatment for the incurable unavoidable affection called "Bored".
-#### Targeted audience: Bored People who likes Pokémon
+#### Problem tackling: 
+A possible treatment for the incurable unavoidable affection called "Bored".
+#### Targeted audience: 
+This app is optimized for bored people who likes Pokémon.
 #### MVP:
   * Will contain a x amount of Pokémon, depending on the difficulty. 
   * Three screens:
@@ -18,7 +19,8 @@
   * Maybe a reset button
   * Maybe multiple areas? I will start with one (areas like Amsterdam)
   * Not sure if the locations will be hard coded or random (Pokémon might appear in the sea?)
-#### Data source?? A database of the Pokémon locations
+#### Data source?? 
+A database of the Pokémon locations
 #### API's:
   * https://pokeapi.co
   * https://cloud.google.com/maps-platform/
