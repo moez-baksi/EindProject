@@ -1,6 +1,5 @@
-## Pokémon Time Trial
-#### Try to catch as much Pokémon as possible within the time limit!
-##### Throwback to the Google-Maps Event in September 2016, with some modifications.
+## Pokémon: learn Amsterdam / Topography
+#### Try to catch all pokemon as fast as possible
 #### Problem tackling: 
 A possible treatment for the incurable unavoidable affection called "Bored".
 #### Targeted audience: 
@@ -10,17 +9,16 @@ This app is optimized for bored people who like Pokémon.
   * Three screens:
     * Start screen
     * High scores at the end
-    * Map
+    * Map (main game)
   * You can catch a Pokémon by tapping on it
-  * Pokémon will be on a random spot
+  * Pokémon will be randomly assigned a determined spot
   * High scores will be saved
 ##### Optional:
   * Online database for the high scores
-  * Maybe a reset button
   * Maybe multiple areas? I will start with one (areas like Amsterdam)
-  * Not sure if the locations will be hard coded or random (Pokémon might appear in the sea?)
+  * Might change the idea of amsterdam into the provinces of the netherlands, and targeting children who have a hard time learning topography. 
 #### Data source?? 
-A database of the Pokémon locations.
+A database of the predetermined locations.
 #### API's:
   * https://pokeapi.co
   * https://cloud.google.com/maps-platform/
@@ -28,6 +26,7 @@ A database of the Pokémon locations.
 Some complications might occur while understanding the API of Google maps. 
 #### Similar apps: 
 Google implemented a similar feature during an event in September 2016.
+
 
 
 ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/PlanToGainWorldDominance.png)
