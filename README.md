@@ -30,6 +30,4 @@ Some complications might occur while understanding the API of Google maps.
 Google implemented a similar feature during an event in September 2016.
 
 
-  Home screen of the app      |  Press start might lead to:
-  :-------------------------:|:-------------------------:
-  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_2.png)  |  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/prop_Project_1.png)
+![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/Schermopname%20(5).png)
