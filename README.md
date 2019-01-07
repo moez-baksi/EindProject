@@ -5,7 +5,7 @@ A possible treatment for the incurable unavoidable affection called "Bored".
 #### Targeted audience: 
 This app is optimized for bored people who like Pokémon.
 #### MVP:
-  * Will contain a x amount of Pokémon, depending on the difficulty. 
+  * Will contain an x amount of Pokémon, depending on the amount of places. 
   * Three screens:
     * Start screen
     * High scores at the end
