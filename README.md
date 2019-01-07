@@ -1,29 +1,33 @@
-# Pokémon Topography
-#### De pokémon lopen los! We hebben iemand nodig die weet waar de provincies liggen die ze voor ons kan vangen!
+## Pokémon Time Trial
+#### Try to catch as much Pokémon as possible within the time limit!
+##### Throwback to the Google-Maps Event in September 2016, with some modifications.
 #### Problem tackling: 
-A possible treatment for the incurable unavoidable affection called "Bored". Daarnaast kan de app helpen kinderen provincies te leren van Nederland. 
+A possible treatment for the incurable unavoidable affection called "Bored".
 #### Targeted audience: 
-Kinderen die affiniteit hebben voor pokémon.
+This app is optimized for bored people who like Pokémon.
 #### MVP:
-  * 12 willekeurige pokemon die gezocht moeten worden in provincies. 
-  * Drie schermen:
-    * Start scherm
-    * High scores op het einde
-    * Kaart (main game)
-  * Een pokémon wordt gevangen door erop te klikken.
-  * High scores worden opgeslagen.
-##### Optioneel:
-  * Online database voor de high scores.
-  * Wanneer de tijd het toelaat kunnen er meerdere steden toegevoegd worden naast de hoofdsteden van provincies
+  * Will contain a x amount of Pokémon, depending on the difficulty. 
+  * Three screens:
+    * Start screen
+    * High scores at the end
+    * Map
+  * You can catch a Pokémon by tapping on it
+  * Pokémon will be on a random spot
+  * High scores will be saved
+##### Optional:
+  * Online database for the high scores
+  * Maybe a reset button
+  * Maybe multiple areas? I will start with one (areas like Amsterdam)
+  * Not sure if the locations will be hard coded or random (Pokémon might appear in the sea?)
 #### Data source?? 
-Database met locaties waar hoofdsteden liggen?
+A database of the Pokémon locations.
 #### API's:
   * https://pokeapi.co
   * https://cloud.google.com/maps-platform/
 #### Hardest part: 
-Het kan moeilijk zijn om pokemon alleen zichtbaar te laten zijn wanneer er op een bepaald grootte ingezoomd wordt.
+Some complications might occur while understanding the API of Google maps. 
 #### Similar apps: 
-Dit geweldige idee is vooral gebaseerd op het evenement dat google georganiseerd had september 2016, waarbij er allemaal pokémon in google maps los liepen. 
+Google implemented a similar feature during an event in September 2016.
 
 
 ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/PlanToGainWorldDominance.png)
