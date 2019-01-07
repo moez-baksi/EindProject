@@ -1,23 +1,25 @@
 ## Pokémon 
 ## Catch all Pokémon!
-##### Throwback to the Google-Maps Event in September 2016.
-## This app lets you catch Pokémon all over the world.
-## Problem tackling with this app: Too much time.
+##### Throwback to the Google-Maps Event in September 2016, with some modifications.
+## This app lets you catch Pokémon in a specfic area within a specified time limit.
+## Problem tackling: A possible treatment for the incurable unavoidable affection called "Bored".
 ## Targeted audience: Bored People who likes Pokémon
-* MVP:
-  * Will contain the original 150 Pokémon
+## MVP:
+  * Will contain a x amount of Pokémon, depending on the difficulty. 
   * Three screens:
     * Start screen
-    * list of caught Pokémon
-    * world map
+    * Highscores at the end
+    * Map
   * You can catch a Pokémon by tapping on it
-  * Pokémon will always be on the same spot
-* Optional
-  * The general idea is that the Pokémon will always be on the same spot, so Pikachu will always be on science park, then another possible idea would be to generate random locations if the app is opened. 
+  * Pokémon will be on a random spot
+  * Highscores will be saved
+### Optional:
+  * Online database for the highscores
   * Maybe a reset button
+  * Maybe multiple areas? I will start with one (areas like Amsterdam)
   * Not sure if the locations will be hard coded or random (Pokémon might appear in the sea?)
-* Data source?? A database of the Pokémon locations
-* Will use at least two API's:
+## Data source?? A database of the Pokémon locations
+## API's:
   * https://pokeapi.co
   * https://cloud.google.com/maps-platform/
 * Hardest part: I think it will be retrieving a map and pinning the locations
