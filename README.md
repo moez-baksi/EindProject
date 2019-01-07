@@ -30,4 +30,4 @@ Some complications might occur while understanding the API of Google maps.
 Google implemented a similar feature during an event in September 2016.
 
 
-![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/Schermopname%20(5).png)
+![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/PlanToGainWorldDominance.png)
