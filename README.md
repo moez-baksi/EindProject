@@ -1,33 +1,29 @@
-## Pokémon Time Trial
-#### Try to catch as much Pokémon as possible within the time limit!
-##### Throwback to the Google-Maps Event in September 2016, with some modifications.
+# Pokémon Topography
+#### De pokémon lopen los! We hebben iemand nodig die weet waar de provincies liggen die ze voor ons kan vangen!
 #### Problem tackling: 
-A possible treatment for the incurable unavoidable affection called "Bored".
+A possible treatment for the incurable unavoidable affection called "Bored". Daarnaast kan de app helpen kinderen provincies te leren van Nederland. 
 #### Targeted audience: 
-This app is optimized for bored people who like Pokémon.
+Kinderen die affiniteit hebben voor pokémon.
 #### MVP:
-  * Will contain a x amount of Pokémon, depending on the difficulty. 
-  * Three screens:
-    * Start screen
-    * High scores at the end
-    * Map
-  * You can catch a Pokémon by tapping on it
-  * Pokémon will be on a random spot
-  * High scores will be saved
-##### Optional:
-  * Online database for the high scores
-  * Maybe a reset button
-  * Maybe multiple areas? I will start with one (areas like Amsterdam)
-  * Not sure if the locations will be hard coded or random (Pokémon might appear in the sea?)
+  * 12 willekeurige pokemon die gezocht moeten worden in provincies. 
+  * Drie schermen:
+    * Start scherm
+    * High scores op het einde
+    * Kaart (main game)
+  * Een pokémon wordt gevangen door erop te klikken.
+  * High scores worden opgeslagen.
+##### Optioneel:
+  * Online database voor de high scores.
+  * Wanneer de tijd het toelaat kunnen er meerdere steden toegevoegd worden naast de hoofdsteden van provincies
 #### Data source?? 
-A database of the Pokémon locations.
+Database met locaties waar hoofdsteden liggen?
 #### API's:
   * https://pokeapi.co
   * https://cloud.google.com/maps-platform/
 #### Hardest part: 
-Some complications might occur while understanding the API of Google maps. 
+Het kan moeilijk zijn om pokemon alleen zichtbaar te laten zijn wanneer er op een bepaald grootte ingezoomd wordt.
 #### Similar apps: 
-Google implemented a similar feature during an event in September 2016.
+Dit geweldige idee is vooral gebaseerd op het evenement dat google georganiseerd had september 2016, waarbij er allemaal pokémon in google maps los liepen. 
 
 
 ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/PlanToGainWorldDominance.png)
