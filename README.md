@@ -29,4 +29,4 @@ Google implemented a similar feature during an event in September 2016.
 
 
 
-![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/PlanToGainWorldDominance (2).png)
+![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/PlanToGainWorldDominance%20(2).png)
