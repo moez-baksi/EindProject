@@ -7,6 +7,7 @@
 #### Functions:
 - A random function wich assigns a random pokemon to a random place/city
 - A function which retrieves data from the sqlite table
+- A callback funtion when the maps are loaded
 
 #### API's:
   * https://pokeapi.co
