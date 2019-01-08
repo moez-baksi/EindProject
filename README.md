@@ -12,11 +12,11 @@ This app is optimized for bored children who like Pokémon, but also need to lea
     * Map (main game)
   * You can catch a Pokémon by tapping on it
   * Pokémon will be randomly assigned a determined spot
-  * High scores will be saved, making it more fun to repeat the excersizes. 
+  * High scores will be saved, making it more fun to repeat the exercises. 
 ##### Optional:
   * Online database for the high scores
   * Maybe multiple areas? I will start with provinces, but rivers/large cities is also possible. 
-  * Might change the idea into amsterdam topography for tourists. 
+  * Might change the idea into Amsterdam topography for tourists. 
 #### Data source?? 
 A database of the predetermined locations and a database of high scores.
 #### API's:
