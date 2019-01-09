@@ -7,14 +7,15 @@ import android.view.View;
 
 public class ScoreActivity extends AppCompatActivity {
 
+    // On create function
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
     }
 
+    // This function let the user return to the home screen
     public void returning (View view) {
-        // Let the user stop and return
         Intent intent = new Intent(ScoreActivity.this, MainActivity.class);
         startActivity(intent);
     }

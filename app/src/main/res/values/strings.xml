@@ -1,4 +1,12 @@
 <resources>
-    <string name="app_name">Maps</string>
+    <string name="app_name">Topografie</string>
     <string name="title_activity_maps">Map</string>
+    <string name="Back">Terug</string>
+    <string name="error">Error</string>
+    <string name="stop">Stoppen</string>
+    <string name="start">Spelen</string>
+    <string name="scores">Resultaten</string>
+    <string name="welcome">Welkom! Wij hebben jouw hulp nodig! Er lopen pokemon los in verschillende
+        steden van Nederland. Kun jij ze zo snel mogelijk voor ons verzamelen?</string>
+    <string name="a_pokeball">A pokeball</string>
 </resources>

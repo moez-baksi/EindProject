@@ -5,24 +5,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class ControlActivity extends AppCompatActivity {
 
     // On create function
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_control);
     }
 
     // This function starts up the maps activity
     public void starting (View view) {
-        Intent intent = new Intent(MainActivity.this, ControlActivity.class);
+        Intent intent = new Intent(ControlActivity.this, MapsActivity.class);
         startActivity(intent);
     }
 
-    // This function starts up the scores screen
-    public void scoring(View view) {
-        Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+    // This function let the user return to the home screen
+    public void returning (View view) {
+        Intent intent = new Intent(ControlActivity.this, MainActivity.class);
         startActivity(intent);
     }
+
 }
