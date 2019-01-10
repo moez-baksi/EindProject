@@ -11,5 +11,5 @@ gestimuleerd om jezelf te verbeteren.
 
 # Dag 3 - Donderdag 10 jan 2019:
 Het design van de prototype in elkaar gezet, kale versie is zo goed als klaar. Gekozen om bijvoorbeeld bij de 'Maps activity' de action bar
-weg te laten om meer ruimte voor het spel te creëren, maar is dit niet te inconsistent? 
-
+weg te laten om meer ruimte voor het spel te creëren, maar is dit niet te inconsistent? Ook de navigatie is geregeld. Ik heb ervoor gekozen
+om de back button bij 3 van de 4 schermen uit te schakelen zodat je niet bijvoorbeeld van resultaten scherm terug kan naar het spel.
