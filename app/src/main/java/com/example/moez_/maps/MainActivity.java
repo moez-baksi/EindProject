@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,5 +25,12 @@ public class MainActivity extends AppCompatActivity {
     public void scoring(View view) {
         Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
         startActivity(intent);
+    }
+
+    // Implements the navigation button
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Gebruik de knoppen op het scherm!",
+                Toast.LENGTH_SHORT).show();
     }
 }

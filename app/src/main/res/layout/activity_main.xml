@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/start"
+        android:id="@+id/main_start"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -17,14 +17,14 @@
         android:onClick="starting"
         android:text="@string/start"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/scores"
+        app:layout_constraintBottom_toTopOf="@+id/main_scores"
         app:layout_constraintDimensionRatio="w,"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/scores"
+        android:id="@+id/main_scores"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -41,13 +41,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/maintext"
+        android:id="@+id/main_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/welcome"
+        android:text="@string/main_welcome"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold|italic"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/main_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -64,10 +64,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/a_pokeball"
-        app:layout_constraintBottom_toTopOf="@+id/start"
+        app:layout_constraintBottom_toTopOf="@+id/main_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maintext"
+        app:layout_constraintTop_toBottomOf="@+id/main_welcome"
         app:srcCompat="@mipmap/pokeball" />
 
 </android.support.constraint.ConstraintLayout>

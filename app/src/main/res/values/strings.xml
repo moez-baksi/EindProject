@@ -6,7 +6,8 @@
     <string name="stop">Stoppen</string>
     <string name="start">Spelen</string>
     <string name="scores">Resultaten</string>
-    <string name="welcome">Welkom! Wij hebben jouw hulp nodig! Er lopen pokemon los in verschillende
+    <string name="main_welcome">Welkom! Wij hebben jouw hulp nodig! Er lopen pokemon los in verschillende
         steden van Nederland. Kun jij ze zo snel mogelijk voor ons verzamelen?</string>
     <string name="a_pokeball">A pokeball</string>
+    <string name="res_title">Dit zijn jouw tot nu behaalde resultaten!</string>
 </resources>

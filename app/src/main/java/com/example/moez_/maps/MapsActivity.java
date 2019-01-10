@@ -1,22 +1,26 @@
 package com.example.moez_.maps;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.GroundOverlay;
+import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+
 
     // On create function
     @Override
@@ -44,14 +48,38 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        // Sets the map type
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+        mMap.getUiSettings().setRotateGesturesEnabled(false);
+
         // Move the camera
-        LatLng utrecht = new LatLng(52.0907374, 5.1214201);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(utrecht, 6));
+        LatLng almere = new LatLng(52.363407,5.191517);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(almere, (float) 7.5));;
+        GroundOverlayOptions pokiball = new GroundOverlayOptions().image(BitmapDescriptorFactory.fromResource(R.mipmap.pokeball)).position(almere, 1000);
+        final GroundOverlay overlay = mMap.addGroundOverlay(pokiball);
+        mMap.setOnCameraMoveListener(new GoogleMap.OnCameraMoveListener() {
+                                         @Override
+                                         public void onCameraMove() {
+                                             float zoom = mMap.getCameraPosition().zoom;
+                                             overlay.setVisible((zoom > 11));
+                                         }
+                                     });
     }
 
     // This function let the user return to the home screen
     public void returning (View view) {
         Intent intent = new Intent(MapsActivity.this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void onCameraMove(){
+        Toast.makeText(this, "Maak het spel af, of druk op 'Stoppen'!",
+                Toast.LENGTH_SHORT).show();
+    }
+    // Implements the navigation button
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Maak het spel af, of druk op 'Stoppen'!",
+                Toast.LENGTH_SHORT).show();
     }
 }

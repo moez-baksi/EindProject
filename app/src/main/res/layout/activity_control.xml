@@ -7,7 +7,7 @@
     tools:context=".ControlActivity">
 
     <TextView
-        android:id="@+id/uitleg"
+        android:id="@+id/control_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/start1"
+        android:id="@+id/control_start"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -31,12 +31,12 @@
         android:onClick="starting"
         android:text="@string/start"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/cancel"
+        app:layout_constraintBottom_toTopOf="@+id/control_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/cancel"
+        android:id="@+id/control_back"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
