@@ -14,4 +14,4 @@ Het design van de prototype in elkaar gezet, kale versie is zo goed als klaar. G
 weg te laten om meer ruimte voor het spel te creëren, maar is dit niet te inconsistent? Ook de navigatie is geregeld. Ik heb ervoor gekozen
 om de back button bij 3 van de 4 schermen uit te schakelen zodat je niet bijvoorbeeld van resultaten scherm terug kan naar het spel. Ik heb
 besloten om het gebruiksvriendelijker te maken door de rotatie uit te zetten en het kompas weg te halen, zodat naar boven altijd het
-noorden is
+noorden is. Daarnaast heel erg veel gestoeid met het zetten van de zoom levels en zichtbaarheid.
