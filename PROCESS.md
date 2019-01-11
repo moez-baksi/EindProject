@@ -15,3 +15,8 @@ weg te laten om meer ruimte voor het spel te creëren, maar is dit niet te incon
 om de back button bij 3 van de 4 schermen uit te schakelen zodat je niet bijvoorbeeld van resultaten scherm terug kan naar het spel. Ik heb
 besloten om het gebruiksvriendelijker te maken door de rotatie uit te zetten en het kompas weg te halen, zodat naar boven altijd het
 noorden is. Daarnaast heel erg veel gestoeid met het zetten van de zoom levels en zichtbaarheid.
+
+# Dag 4 - Vrijdag 11 jan 2019:
+Ik heb besloten om de steden van de provincies te hardcoden met hun coordinaten, puur omdat er geen duidelijk API te vinden was met de 
+juiste coordinaten. Daarnaast heb ik stippen op de kaart gezet en de namen van de steden wit gemaakt. Dit lijkt momenteel het meest op wat
+ik zou willen. Later wordt er weer naar gekeken. Ook is er geworsteld met het klikbaar maken van de groundoverlays en hiervoor de listeners te implementeren. 
