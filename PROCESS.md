@@ -24,4 +24,4 @@ te implementeren.
 
 # Dag 5 - Maandag 14 jan 2019: (v 0.31)
 Vooral bezig geweest met het bug fixen van de prototype, daarbij de feedback verwerkt van de assistent. Daarbij heb ik gekozen om
-bijvoorbeeld de kaart iets rustiger te maken qua uiterlijk om te kijken of dat de spel ervaring bevorderd. 
+bijvoorbeeld de kaart iets rustiger te maken qua uiterlijk om te kijken of dat de spel ervaring bevorderd. Daarnaast concept bedacht van de centreet knop, om ervoor te zorgen dat de camera altijd terug kan naar centraal Nederland
