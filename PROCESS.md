@@ -22,5 +22,6 @@ juiste coordinaten. Daarnaast heb ik stippen op de kaart gezet en de namen van d
 ik zou willen. Later wordt er weer naar gekeken. Ook is er geworsteld met het klikbaar maken van de groundoverlays en hiervoor de listeners 
 te implementeren. 
 
-# Dag 5 - Maandag 14 jan 2019: (v 0.25)
-Vooral bezig geweest met het bug fixen van de prototype, daarbij de feedback verwerkt van de assistent, 
+# Dag 5 - Maandag 14 jan 2019: (v 0.31)
+Vooral bezig geweest met het bug fixen van de prototype, daarbij de feedback verwerkt van de assistent. Daarbij heb ik gekozen om
+bijvoorbeeld de kaart iets rustiger te maken qua uiterlijk om te kijken of dat de spel ervaring bevorderd. 
