@@ -17,12 +17,15 @@ besloten om het gebruiksvriendelijker te maken door de rotatie uit te zetten en 
 noorden is. Daarnaast heel erg veel gestoeid met het zetten van de zoom levels en zichtbaarheid.
 
 # Dag 4 - Vrijdag 11 jan 2019: (v 0.24)
-Ik heb besloten om de steden van de provincies te hardcoden met hun coordinaten, puur omdat er geen duidelijk API te vinden was met de 
-juiste coordinaten. Daarnaast heb ik stippen op de kaart gezet en de namen van de steden wit gemaakt. Dit lijkt momenteel het meest op wat
-ik zou willen. Later wordt er weer naar gekeken. Ook is er geworsteld met het klikbaar maken van de groundoverlays en hiervoor de listeners 
+Ik heb besloten om de steden van de provincies te hardcoden met hun coördinaten, puur omdat er geen duidelijk API te vinden was met de 
+juiste coördinaten. Daarnaast heb ik stippen op de kaart gezet en de namen van de steden wit gemaakt. Dit lijkt momenteel het meest op wat
+ik zou willen. Later wordt er weer naar gekeken. Ook is er geworsteld met het klikbaar maken van de grond overlays en hiervoor de listeners 
 te implementeren. 
 
 # Dag 5 - Maandag 14 jan 2019: (v 0.31)
 Vooral bezig geweest met het bug fixen van de prototype, daarbij de feedback verwerkt van de assistent. Daarbij heb ik gekozen om
 bijvoorbeeld de kaart iets rustiger te maken qua uiterlijk om te kijken of dat de spel ervaring bevorderd. Daarnaast concept bedacht van de
-centreet knop, om ervoor te zorgen dat de camera altijd terug kan naar centraal Nederland. 
+centreer knop, om ervoor te zorgen dat de camera altijd terug kan naar centraal Nederland. 
+
+# Dag 5 - Dinsdag 15 jan 2019: (v 0.32)
+Besloten om in plaats van system timer + textview update de ingebouwde chronometer te gebruiken, en deze ook geïmplementeerd. 
