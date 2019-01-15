@@ -1,10 +1,12 @@
 package com.example.moez_.maps;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,12 +20,13 @@ import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 
-import org.w3c.dom.Text;
-
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, PokeRequest.Callback {
 
     private GoogleMap mMap;
     GroundOverlay overlay;
@@ -42,6 +45,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
+
+        // Obtain the pokemon and set counter
+        PokeRequest poke = new PokeRequest(this);
+        poke.getPokemon(this);
         counter = 0;
     }
 
@@ -65,6 +72,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Obtain the cities and go to the overlay function
         list = listCities();
         overlay();
+        
+        // Start the timer
+        Chronometer timer = (Chronometer) findViewById(R.id.maps_time);
+        timer.start();
     }
 
     public void overlay(){
@@ -96,19 +107,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // Hardcoded cities
     public ArrayList<City> listCities(){
         list = new ArrayList<City>();
-        list.add(new City("Groningen", new LatLng(53.2193835, 6.566501700000003), false, "Groningen"));
-        list.add(new City ("Leeuwarden", new LatLng(53.2012334, 5.799913300000071), false, "Friesland"));
-        list.add(new City ("Assen", new LatLng(52.992753, 6.564228400000047), false, "Drenthe"));
-        list.add(new City("Zwolle", new LatLng(52.5167747, 6.083021899999949), false, "Overijssel"));
-        list.add(new City("Lelystad", new LatLng(52.51853699999999, 5.471421999999961), false, "Flevoland"));
-        list.add(new City ("Arnhem", new LatLng(51.9851034, 5.898729600000024), false, "Gelderland"));
-        list.add(new City("Utrecht", new LatLng(52.09073739999999, 5.121420100000023), false, "Utrecht"));
-        list.add(new City("Haarlem", new LatLng(52.3873878, 4.646219400000064), false, "Noord-Holland"));
-        list.add(new City("Den_Haag", new LatLng(52.0704978, 4.3006999000000405), false, "Zuid-Holland"));
-        list.add(new City("Middelburg", new LatLng(51.49879620000001, 3.610997999999995), false, "Zeeland"));
-        list.add(new City(" \t's-Hertogenbosch", new LatLng(51.69781620000001, 5.303674799999953), false, "Noord-Brabant"));
-        list.add(new City("Maastricht", new LatLng(50.8513682, 5.6909725000000435), false, "Limburg"));
-        list.add(new City("Amsterdam", new LatLng(52.3679843, 4.903561399999944), false, "Nederland"));
+        list.add(new City("Groningen", new LatLng(53.2193835, 6.566501700000003), "Groningen"));
+        list.add(new City ("Leeuwarden", new LatLng(53.2012334, 5.799913300000071), "Friesland"));
+        list.add(new City ("Assen", new LatLng(52.992753, 6.564228400000047), "Drenthe"));
+        list.add(new City("Zwolle", new LatLng(52.5167747, 6.083021899999949), "Overijssel"));
+        list.add(new City("Lelystad", new LatLng(52.51853699999999, 5.471421999999961), "Flevoland"));
+        list.add(new City ("Arnhem", new LatLng(51.9851034, 5.898729600000024), "Gelderland"));
+        list.add(new City("Utrecht", new LatLng(52.09073739999999, 5.121420100000023), "Utrecht"));
+        list.add(new City("Haarlem", new LatLng(52.3873878, 4.646219400000064), "Noord-Holland"));
+        list.add(new City("Den_Haag", new LatLng(52.0704978, 4.3006999000000405), "Zuid-Holland"));
+        list.add(new City("Middelburg", new LatLng(51.49879620000001, 3.610997999999995), "Zeeland"));
+        list.add(new City(" \t's-Hertogenbosch", new LatLng(51.69781620000001, 5.303674799999953), "Noord-Brabant"));
+        list.add(new City("Maastricht", new LatLng(50.8513682, 5.6909725000000435),  "Limburg"));
+        list.add(new City("Amsterdam", new LatLng(52.3679843, 4.903561399999944),  "Nederland"));
         return list;
     }
 
@@ -123,6 +134,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onBackPressed() {
         Toast.makeText(this, "Maak het spel af, of druk op 'Stoppen'!",
                 Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void gotPokiError(String message) {
+
+    }
+
+    @Override
+    public void gotPoki(ArrayList<Pokemon> pokilist) {
+
     }
 
     // When the camera moves, check whether it is zoomed enough, and set visibility based on it
