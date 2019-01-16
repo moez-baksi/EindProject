@@ -4,11 +4,11 @@ import android.graphics.Bitmap;
 
 public class Pokemon {
         String name;
-        Bitmap image;
+        String url;
 
-        public Pokemon(String name, Bitmap image) {
+        public Pokemon(String name, String url) {
             this.name = name;
-            this.image = image;
+            this.url = url;
         }
 
 }
