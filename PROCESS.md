@@ -29,3 +29,6 @@ centreer knop, om ervoor te zorgen dat de camera altijd terug kan naar centraal 
 
 # Dag 5 - Dinsdag 15 jan 2019: (v 0.32)
 Besloten om in plaats van system timer + textview update de ingebouwde chronometer te gebruiken, en deze ook geïmplementeerd. 
+
+# Dag 6 - Woemnsdag 16 jan 2019: (v 0.33)
+5+ uur bezig geweest met het laden van de API afbeeldingen. Besloten om een extra API te gebruiken om deze te laden: Picaso.
