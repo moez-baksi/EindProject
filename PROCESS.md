@@ -38,4 +38,4 @@ een extra callback etc. Daarnaast alle labels van de kaart afgegegooid.
 Na het testen tot de conclusie gekomen dat elke keer nadat een pokemon aangetikt is een nieuwe pokemon op te vragen het spel significant 
 benadeeld. Testen of het beter is wanneer de pokemon en hun plaatje op het begin wordt aangevraagd. EDIT: uiteindelijk ervoor gekozen 
 dat de pokemon op het begin aangevraagd wordt en het plaatje wanneer de overlay aangemaakt wordt. Daarnaast de GIF gemaakt met
-user handelingen
+user handelingen. Daarnaast is er een progressbar toegevoegd om te laten weten wanneer de speler de app kan gebruiken. 
