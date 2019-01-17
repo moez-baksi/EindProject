@@ -27,9 +27,13 @@ Vooral bezig geweest met het bug fixen van de prototype, daarbij de feedback ver
 bijvoorbeeld de kaart iets rustiger te maken qua uiterlijk om te kijken of dat de spel ervaring bevorderd. Daarnaast concept bedacht van de
 centreer knop, om ervoor te zorgen dat de camera altijd terug kan naar centraal Nederland. 
 
-# Dag 5 - Dinsdag 15 jan 2019: (v 0.32)
+# Dag 6 - Dinsdag 15 jan 2019: (v 0.32)
 Besloten om in plaats van system timer + textview update de ingebouwde chronometer te gebruiken, en deze ook geïmplementeerd. 
 
-# Dag 6 - Woemnsdag 16 jan 2019: (v 0.33)
+# Dag 7 - Woensdag 16 jan 2019: (v 0.33)
 5+ uur bezig geweest met het laden van de API afbeeldingen. Besloten om een extra API te gebruiken om deze te laden: Picasso in plaats van 
 een extra callback etc. Daarnaast alle labels van de kaart afgegegooid. 
+
+# Dag 8 - Donderdag 17 jan 2019: (v 0.34)
+Na het testen tot de conclusie gekomen dat elke keer nadat een pokemon aangetikt is een nieuwe pokemon op te vragen het spel significant 
+benadeeld. Testen of het beter is wanneer de pokemon en hun plaatje op het begin wordt aangevraagd.
