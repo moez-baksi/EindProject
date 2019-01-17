@@ -17,13 +17,13 @@ public class ControlActivity extends AppCompatActivity {
     }
 
     // This function starts up the maps activity
-    public void starting (View view) {
+    public void goStart (View view) {
         Intent intent = new Intent(ControlActivity.this, MapsActivity.class);
         startActivity(intent);
     }
 
     // This function let the user return to the home screen
-    public void returning (View view) {
+    public void goBack (View view) {
         Intent intent = new Intent(ControlActivity.this, MainActivity.class);
         startActivity(intent);
     }

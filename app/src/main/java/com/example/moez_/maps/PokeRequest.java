@@ -14,13 +14,11 @@ import org.json.JSONObject;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class PokeRequest implements  Response.Listener<JSONObject>, Response.ErrorListener{
+public class PokeRequest implements  Response.Listener<JSONObject>, Response.ErrorListener {
 
     // Constructor
     private Context context;
-    PokeRequest(Context con){
-        context = con;
-    }
+    PokeRequest(Context con) { context = con;  }
 
     // Callback
     public interface Callback {
@@ -37,27 +35,30 @@ public class PokeRequest implements  Response.Listener<JSONObject>, Response.Err
     // For response
     @Override
     public void onResponse(JSONObject response) {
-    Pokemon temp = null;
+        Pokemon temp = null;
         try {
             String name = response.getString("name");
             JSONObject sprites = response.getJSONObject("sprites");
             String url = sprites.getString("front_default");
-            temp = new Pokemon(name, url);
+            temp = new Pokemon(name, url, null);
         } catch (JSONException e) {
             e.printStackTrace();
         }
         callback.gotPoke(temp);
     }
 
+    // Function to get the pokemon
     private Callback callback;
-    void getPokemon(Callback activity){
+    void getPokemon(Callback activity) {
+        callback = activity;
         RequestQueue queue = Volley.newRequestQueue(context);
+
+        // Get number and random link
         String number = String.valueOf(ThreadLocalRandom.current().nextInt(1, 150));
-        String url = "https://pokeapi.co/api/v2/pokemon/%s/";
-        url = String.format(url, number);
+        String url = String.format("https://pokeapi.co/api/v2/pokemon/%s/", number);
+
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null,
                 this, this);
         queue.add(jsonObjectRequest);
-        callback = activity;
     }
 }

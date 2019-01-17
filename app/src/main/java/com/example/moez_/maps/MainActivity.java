@@ -16,13 +16,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // This function starts up the maps activity
-    public void starting (View view) {
+    public void goStart (View view) {
         Intent intent = new Intent(MainActivity.this, ControlActivity.class);
         startActivity(intent);
     }
 
     // This function starts up the scores screen
-    public void scoring(View view) {
+    public void goScore(View view) {
         Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
         startActivity(intent);
     }

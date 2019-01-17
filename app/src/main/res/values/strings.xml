@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Topografie</string>
     <string name="title_activity_maps">Map</string>
-    <string name="Back">Terug</string>
+    <string name="back">Terug</string>
     <string name="error">Error</string>
+    <string name="loading">Laden</string>
     <string name="stop">Stoppen</string>
     <string name="start">Spelen</string>
     <string name="scores">Resultaten</string>
@@ -11,4 +12,5 @@
     <string name="a_pokeball">A pokeball</string>
     <string name="res_title">Dit zijn jouw tot nu behaalde resultaten!</string>
     <string name="centreer">Centreer</string>
+    <string name="help"><![CDATA[Gebruik twee vingers om in en uit te zoomen & klik op een Pokemon om hem te vangen!]]></string>
 </resources>

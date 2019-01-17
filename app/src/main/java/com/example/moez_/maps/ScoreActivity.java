@@ -16,7 +16,7 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     // This function let the user return to the home screen
-    public void returning (View view) {
+    public void gpBack (View view) {
         Intent intent = new Intent(ScoreActivity.this, MainActivity.class);
         startActivity(intent);
     }
