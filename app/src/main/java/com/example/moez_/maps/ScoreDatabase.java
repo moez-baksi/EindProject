@@ -58,7 +58,6 @@ public class ScoreDatabase extends SQLiteOpenHelper {
         return scores;
     }
 
-    // Insert a new journal entry
     public void insert(String scory){
         SQLiteDatabase db = getWritableDatabase();
         String exec_statement = String.format("INSERT INTO entries (score) VALUES ('%s');", scory);
