@@ -39,3 +39,6 @@ Na het testen tot de conclusie gekomen dat elke keer nadat een pokemon aangetikt
 benadeeld. Testen of het beter is wanneer de pokemon en hun plaatje op het begin wordt aangevraagd. EDIT: uiteindelijk ervoor gekozen 
 dat de pokemon op het begin aangevraagd wordt en het plaatje wanneer de overlay aangemaakt wordt. Daarnaast de GIF gemaakt met
 user handelingen. Daarnaast is er een progressbar toegevoegd om te laten weten wanneer de speler de app kan gebruiken. 
+
+# Dag 9 - Vrijdag 18 jan 2019: (v 0.35)
+Maken van de database 
