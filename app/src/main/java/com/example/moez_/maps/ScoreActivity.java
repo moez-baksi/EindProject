@@ -1,11 +1,8 @@
 package com.example.moez_.maps;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TableLayout;
@@ -15,8 +12,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import static java.security.AccessController.getContext;
-
 public class ScoreActivity extends AppCompatActivity {
 
     // On create function
@@ -25,26 +20,48 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
+        Intent intent = getIntent();
+        String userScore = intent.getStringExtra("score");
         ScoreDatabase scoreDatabase = ScoreDatabase.getInstance(getApplicationContext());
-        scoreDatabase.insert("dit is een tweede");
-        ArrayList<ScoreClass> data = scoreDatabase.selectAll();
+
+        if (userScore != null){
+            Toast.makeText(this, "Je hebt een score van " + userScore + "!",
+                    Toast.LENGTH_SHORT).show();
+            scoreDatabase.insert(userScore);
+        }
+
+        ArrayList<Score> data = scoreDatabase.selectAll();
+
         TableLayout tableLayout = findViewById(R.id.score_table);
         tableLayout.setStretchAllColumns(true);
+
+        TableRow tableRow = new TableRow(this);
+        TextView viewScore = new TextView(this);
+        viewScore.setText("Tijd: ");
+        viewScore.setGravity(Gravity.CENTER);
+        tableRow.addView(viewScore, 0);
+
+        TextView viewDate = new TextView(this);
+        viewDate.setText("Datum: ");
+        viewDate.setGravity(Gravity.CENTER);
+        tableRow.addView(viewDate, 1);
+
+        tableLayout.addView(tableRow);
 
         for (int i = 0; i < data.size(); i++){
             String entryDate = data.get(i).date;
             String entryScore = data.get(i).score;
-            TableRow tableRow = new TableRow(this);
+            tableRow = new TableRow(this);
 
-            TextView viewDate = new TextView(this);
+            viewScore = new TextView(this);
+            viewScore.setText(entryScore);
+            viewScore.setGravity(Gravity.CENTER);
+            tableRow.addView(viewScore, 0);
+
+            viewDate = new TextView(this);
             viewDate.setText(entryDate);
             viewDate.setGravity(Gravity.CENTER);
-            tableRow.addView(viewDate, 0);
-
-            TextView viewScore = new TextView(this);
-            viewScore.setText(entryScore);
-            viewDate.setGravity(Gravity.CENTER);
-            tableRow.addView(viewScore, 1);
+            tableRow.addView(viewDate, 1);
 
             tableLayout.addView(tableRow);
         }

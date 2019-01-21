@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Chronometer;
 import android.widget.TextView;
@@ -20,12 +21,14 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
         PokeRequest.Callback {
@@ -72,6 +75,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Set listeners
         mMap.setOnCameraMoveListener(new OnCameraMoveListener());
         mMap.setOnGroundOverlayClickListener(new OnGroundOverlayClickListener());
+
+        // Try set bounds
+        // Create a LatLngBounds that includes the city of Adelaide in Australia.
+        LatLngBounds netherlands = new LatLngBounds(
+                new LatLng(50.8, 3.27), new LatLng(53.34, 7.21));
+        mMap.setLatLngBoundsForCameraTarget(netherlands);
 
         // Reset the amount founds
         amountFound = 0;
@@ -142,8 +151,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // If there is a overlay, remove it and display message
         if (overlay != null) {
             amountFound ++;
-            Toast.makeText(this, answerPokemonName + " is succesvol gevangen!",
-                    Toast.LENGTH_SHORT).show();
+            Toast toast = Toast.makeText(this, answerPokemonName
+                            + " is succesvol gevangen!", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.show();
             overlay.remove();
         }
 
@@ -235,8 +246,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         public void onGroundOverlayClick(GroundOverlay groundOverlay) {
             float zoom = mMap.getCameraPosition().zoom;
             if (zoom > 12){
-                if (amountFound == 12){
+                if (amountFound == 2){
                     Intent intent = new Intent(MapsActivity.this, ScoreActivity.class);
+                    Chronometer timer = findViewById(R.id.maps_time);
+                    long score = SystemClock.elapsedRealtime() - timer.getBase();
+                    long seconds = TimeUnit.MILLISECONDS.toSeconds(score);
+                    String userScore = String.format("%02d seconden", seconds);
+                    intent.putExtra("score", userScore);
                     startActivity(intent);
                 }
                 else{

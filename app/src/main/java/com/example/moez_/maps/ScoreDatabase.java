@@ -15,7 +15,6 @@ public class ScoreDatabase extends SQLiteOpenHelper {
 
     private ScoreDatabase(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
-        Log.d("Haaat", "Bannaan");
     }
 
     @Override
@@ -23,7 +22,6 @@ public class ScoreDatabase extends SQLiteOpenHelper {
         String exec_statement = "CREATE TABLE entries (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "score TEXT, timestap TIMESTAMP DEFAULT CURRENT_TIMESTAMP);";
         db.execSQL(exec_statement);
-        Log.d("Haaat", "appel");
     }
 
     @Override
@@ -44,14 +42,14 @@ public class ScoreDatabase extends SQLiteOpenHelper {
     }
 
     // Select all items in the database
-    public ArrayList<ScoreClass> selectAll(){
+    public ArrayList<Score> selectAll(){
         SQLiteDatabase db = getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM entries;", null);
-        ArrayList <ScoreClass> scores = new ArrayList<>();
+        Cursor cursor = db.rawQuery("SELECT * FROM entries ORDER BY score;", null);
+        ArrayList <Score> scores = new ArrayList<>();
         while (cursor.moveToNext()){
             String date = cursor.getString(cursor.getColumnIndexOrThrow("timestap"));
             String score = cursor.getString(cursor.getColumnIndexOrThrow("score"));
-            ScoreClass entry = new ScoreClass(date, score);
+            Score entry = new Score(date, score);
             scores.add(entry);
         }
         cursor.close();

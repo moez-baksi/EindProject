@@ -27,6 +27,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/toriall"
         app:layout_constraintBottom_toTopOf="@+id/control_start"
         app:layout_constraintDimensionRatio="h,"
