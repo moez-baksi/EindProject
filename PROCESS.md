@@ -42,3 +42,6 @@ user handelingen. Daarnaast is er een progressbar toegevoegd om te laten weten w
 
 # Dag 9 - Vrijdag 18 jan 2019: (v 0.35)
 Maken van de database 
+
+# Dag 10 - Maandag 21 jan 2019: (v 0.41)
+Database af. Daarnaast beslissingen gemaakt over hoe ik de tabel ga weergeven. en gekozen voor een material design
