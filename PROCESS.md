@@ -45,3 +45,7 @@ Maken van de database
 
 # Dag 10 - Maandag 21 jan 2019: (v 0.41)
 Database af. Daarnaast beslissingen gemaakt over hoe ik de tabel ga weergeven. en gekozen voor een material design
+
+
+# Dag 11 - Dinsdag 22 jan 2019: (v 0.42)
+Laatste hand gelegd aan design. Bugfixes. 
