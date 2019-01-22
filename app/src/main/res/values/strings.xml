@@ -13,4 +13,5 @@
     <string name="res_title">Dit zijn jouw tot nu behaalde resultaten!</string>
     <string name="centreer">Centreer</string>
     <string name="help"><![CDATA[Gebruik twee vingers om in en uit te zoomen & klik op een Pokemon om hem te vangen!]]></string>
+    <string name="title_activity_worlds">Map</string>
 </resources>

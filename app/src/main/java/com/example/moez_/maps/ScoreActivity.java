@@ -25,9 +25,9 @@ public class ScoreActivity extends AppCompatActivity {
         ScoreDatabase scoreDatabase = ScoreDatabase.getInstance(getApplicationContext());
 
         if (userScore != null){
-            Toast.makeText(this, "Je hebt een score van " + userScore + "!",
-                    Toast.LENGTH_SHORT).show();
-            scoreDatabase.insert(userScore);
+                scoreDatabase.insert(userScore);
+                TextView textView = findViewById(R.id.score_title);
+                textView.setText(String.format("Je hebt een score van %s!", userScore));
         }
 
         ArrayList<Score> data = scoreDatabase.selectAll();

@@ -70,7 +70,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Move the camera so it centers The Netherlands perfectly
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.363407,5.191517),
-                (float) 7));
+                (float) 6.9));
 
         // Set listeners
         mMap.setOnCameraMoveListener(new OnCameraMoveListener());
@@ -215,7 +215,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // This function centers the screen
     public void setCenter (View view) {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.363407,5.191517),
-                (float) 7));
+                (float) 6.9));
     }
 
     // This function let the user return to the home screen
@@ -246,7 +246,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         public void onGroundOverlayClick(GroundOverlay groundOverlay) {
             float zoom = mMap.getCameraPosition().zoom;
             if (zoom > 12){
-                if (amountFound == 2){
+                if (amountFound == 12){
+                    overlay.remove();
                     Intent intent = new Intent(MapsActivity.this, ScoreActivity.class);
                     Chronometer timer = findViewById(R.id.maps_time);
                     long score = SystemClock.elapsedRealtime() - timer.getBase();

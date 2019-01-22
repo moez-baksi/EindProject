@@ -15,6 +15,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/help"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
