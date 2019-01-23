@@ -158,7 +158,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 TextView hint = findViewById(R.id.maps_clue);
                 int randomNum = ThreadLocalRandom.current().nextInt(0, 2);
                 if (randomNum == 0){
-                    hint.setText("Er is een pokemon gezien in de stad " + answerCity.name + "!");
+                    hint.setText("Er is een pokemon gezien in de stad genaamd " + answerCity.name
+                            + "!");
                 }
                 else{
                     hint.setText("Er is een pokemon gezien in de hoofdstad van " + answerCity.hint
@@ -234,9 +235,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Intent intent = new Intent(MapsActivity.this, ScoreActivity.class);
                     Chronometer timer = findViewById(R.id.maps_time);
                     long score = SystemClock.elapsedRealtime() - timer.getBase();
-                    long seconds = TimeUnit.MILLISECONDS.toSeconds(score);
-                    String userScore = String.format("%02d seconden", seconds);
-                    intent.putExtra("score", userScore);
+                    int seconds = (int) TimeUnit.MILLISECONDS.toSeconds(score);
+//                    String userScore = String.format("%02d seconden", seconds);
+                    intent.putExtra("score", seconds);
+                    int modeToInt = (mode.equals("NE") ? 1 : 2);
+                    intent.putExtra("mode", modeToInt);
                     startActivity(intent);
                 }
                 else{

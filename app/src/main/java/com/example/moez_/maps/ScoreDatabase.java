@@ -20,7 +20,7 @@ public class ScoreDatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String exec_statement = "CREATE TABLE entries (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "score TEXT, timestap TIMESTAMP DEFAULT CURRENT_TIMESTAMP);";
+                "score INTEGER, mode INTEGER, timestap TIMESTAMP DEFAULT CURRENT_TIMESTAMP);";
         db.execSQL(exec_statement);
     }
 
@@ -42,23 +42,31 @@ public class ScoreDatabase extends SQLiteOpenHelper {
     }
 
     // Select all items in the database
-    public ArrayList<Score> selectAll(){
+    public ArrayList<Score> selectAll(int mode){
         SQLiteDatabase db = getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM entries ORDER BY score;", null);
+        Cursor cursor;
+        if (mode == 1){
+            cursor = db.rawQuery("SELECT * FROM entries WHERE mode=1 ORDER BY score;", null);
+        }
+        else
+        {
+            cursor = db.rawQuery("SELECT * FROM entries WHERE mode=2 ORDER BY score;", null);
+        }
         ArrayList <Score> scores = new ArrayList<>();
         while (cursor.moveToNext()){
             String date = cursor.getString(cursor.getColumnIndexOrThrow("timestap"));
-            String score = cursor.getString(cursor.getColumnIndexOrThrow("score"));
-            Score entry = new Score(date, score);
+            int score = cursor.getInt(cursor.getColumnIndexOrThrow("score"));
+            String userScore = String.format("%02d seconden", score);
+            Score entry = new Score(date, userScore);
             scores.add(entry);
         }
         cursor.close();
         return scores;
     }
 
-    public void insert(String scory){
+    public void insert(Integer score, Integer mode){
         SQLiteDatabase db = getWritableDatabase();
-        String exec_statement = String.format("INSERT INTO entries (score) VALUES ('%s');", scory);
+        String exec_statement = String.format("INSERT INTO entries (score, mode) VALUES ('%d', '%d');", score, mode);
         db.execSQL(exec_statement);
     }
 }

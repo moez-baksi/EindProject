@@ -6,7 +6,8 @@
     <string name="loading">Laden</string>
     <string name="stop">Stoppen</string>
     <string name="start">Spelen</string>
-    <string name="scores">Resultaten</string>
+    <string name="scores">Resultaten Nederland</string>
+    <string name="scores_2">Resultaten Noord Europa</string>
     <string name="main_welcome">Welkom! \n Wij hebben jouw topografie kennis nodig!
         Er lopen pokemon los in verschillende steden. Kun jij ze zo snel mogelijk voor ons
         verzamelen?</string>

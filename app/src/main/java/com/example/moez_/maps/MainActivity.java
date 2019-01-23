@@ -22,8 +22,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // This function starts up the scores screen
-    public void goScore(View view) {
+    public void goScoreNe(View view) {
         Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+        intent.putExtra("mode", 1);
+        startActivity(intent);
+    }
+
+    public void goScoreNl(View view) {
+        Intent intent = new Intent(MainActivity.this, ScoreActivity.class);
+        intent.putExtra("mode", 2);
         startActivity(intent);
     }
 

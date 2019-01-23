@@ -21,16 +21,24 @@ public class ScoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_score);
 
         Intent intent = getIntent();
-        String userScore = intent.getStringExtra("score");
+        int userScore = intent.getIntExtra("score", 0);
+        int mode = intent.getIntExtra("mode", 0);
         ScoreDatabase scoreDatabase = ScoreDatabase.getInstance(getApplicationContext());
 
-        if (userScore != null){
-                scoreDatabase.insert(userScore);
+        if (userScore > 1){
+                scoreDatabase.insert(userScore, mode);
                 TextView textView = findViewById(R.id.score_title);
-                textView.setText(String.format("Je hebt een score van %s!", userScore));
+                if (mode == 1){
+                    textView.setText(String.format("Noord Europa: \n " +
+                            "Je hebt een score van %s seconden!", userScore));
+                }
+                else{
+                    textView.setText(String.format("Nederland: \n " +
+                            "Je hebt een score van %s seconden!", userScore));
+                }
         }
 
-        ArrayList<Score> data = scoreDatabase.selectAll();
+        ArrayList<Score> data = scoreDatabase.selectAll(mode);
 
         TableLayout tableLayout = findViewById(R.id.score_table);
         tableLayout.setStretchAllColumns(true);

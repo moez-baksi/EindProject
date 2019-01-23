@@ -7,6 +7,22 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/main_scores_ne"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="goScoreNl"
+        android:text="@string/scores"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/main_scores_nl"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/main_start"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
@@ -17,27 +33,25 @@
         android:onClick="goStart"
         android:text="@string/start"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/main_scores"
+        app:layout_constraintBottom_toTopOf="@+id/main_scores_ne"
         app:layout_constraintDimensionRatio="w,"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/main_scores"
+        android:id="@+id/main_scores_nl"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="goScore"
-        android:text="@string/scores"
+        android:onClick="goScoreNe"
+        android:text="@string/scores_2"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -59,7 +73,7 @@
     <ImageView
         android:id="@+id/main_image"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="203dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
