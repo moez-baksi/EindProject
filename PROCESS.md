@@ -50,3 +50,7 @@ Database af. Daarnaast beslissingen gemaakt over hoe ik de tabel ga weergeven. e
 # Dag 11 - Dinsdag 22 jan 2019: (v 0.42)
 Laatste hand gelegd aan design. Bugfixes. Thema naar Roze gewijzigd. Scrollview implemented. Gespeeld met de design van de toast bij het
 vangen van pokemon. Daarnaast een textview gemaakt met de score.
+
+# Dag 12 - Woensdag 23 jan 2019: (v 0.43)
+Besloten om ook noord europa te implementeren, daarnaast kleine aanpassingen gedaan aan het design. Ook gekozen om de hint aan te
+passen.
