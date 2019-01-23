@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     // Implements the navigation button
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "Gebruik de knoppen op het scherm!",
+        Toast.makeText(this, "Je kan hier niet terug!",
                 Toast.LENGTH_SHORT).show();
     }
 }

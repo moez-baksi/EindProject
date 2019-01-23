@@ -16,15 +16,17 @@ public class ControlActivity extends AppCompatActivity {
         setContentView(R.layout.activity_control);
     }
 
-    // This function starts up the maps activity
-    public void goStart (View view) {
+    // This function starts up the Ne game
+    public void goStartNE (View view) {
         Intent intent = new Intent(ControlActivity.this, MapsActivity.class);
+        intent.putExtra("MODE", "NE");
         startActivity(intent);
     }
 
-    // This function let the user return to the home screen
-    public void goBack (View view) {
-        Intent intent = new Intent(ControlActivity.this, MainActivity.class);
+    // This function starts up the NL game
+    public void goStartNL (View view) {
+        Intent intent = new Intent(ControlActivity.this, MapsActivity.class);
+        intent.putExtra("MODE", "NL");
         startActivity(intent);
     }
 }

@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Chronometer;
@@ -34,9 +35,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         PokeRequest.Callback {
 
     // Global variables
+    String mode;
     private GoogleMap mMap;
     private Target target;
-    int amountFound;
     int amountRequested;
     String answerPokemonName;
     ArrayList<City> cityArrayList;
@@ -56,6 +57,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
+        Intent intent = getIntent();
+        mode = intent.getStringExtra("MODE");
     }
 
 
@@ -68,67 +71,38 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.style));
         mMap.getUiSettings().setRotateGesturesEnabled(false);
 
-        // Move the camera so it centers The Netherlands perfectly
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.363407,5.191517),
-                (float) 6.9));
+        // Move the camera so it centers perfectly
+        LatLng center = (mode.equals("NE") ? new LatLng(64,5.2) :
+                new LatLng(52.363407,5.191517));
+        float zoom = mode.equals("NE") ? (float) 3.2 : (float) 6.9;
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(center, zoom));
 
         // Set listeners
         mMap.setOnCameraMoveListener(new OnCameraMoveListener());
         mMap.setOnGroundOverlayClickListener(new OnGroundOverlayClickListener());
 
-        // Try set bounds
-        // Create a LatLngBounds that includes the city of Adelaide in Australia.
-        LatLngBounds netherlands = new LatLngBounds(
-                new LatLng(50.8, 3.27), new LatLng(53.34, 7.21));
-        mMap.setLatLngBoundsForCameraTarget(netherlands);
+        LatLng southWest = (mode.equals("NE") ? new LatLng(47, - 25) :
+                new LatLng(50.8, 3.27));
+        LatLng northEast = (mode.equals("NE") ? new LatLng(70, 33) :
+                new LatLng(53.34, 7.21));
+        mMap.setLatLngBoundsForCameraTarget(new LatLngBounds(southWest, northEast));
 
         // Reset the amount founds
-        amountFound = 0;
         amountRequested = 0;
+        pokemonArrayList = new ArrayList<>();
 
         // Create new lists
-        pokemonArrayList = new ArrayList<>();
-        cityArrayList = new ArrayList<>();
+        ListCities listCity = new ListCities();
+        cityArrayList = (mode.equals("NE") ? listCity.getNorthEurope() :
+                listCity.getNetherlands());
 
         // Obtain the cities, pokemon, set time and start function
-        listCities();
-    }
-
-    // Hardcoded cities
-    public void listCities(){
-        cityArrayList.add(new City("Groningen", new LatLng(53.2193835,
-                6.566501700000003), "Groningen"));
-        cityArrayList.add(new City ("Leeuwarden", new LatLng(53.2012334,
-                5.799913300000071), "Friesland"));
-        cityArrayList.add(new City ("Assen", new LatLng(52.992753,
-                6.564228400000047), "Drenthe"));
-        cityArrayList.add(new City("Zwolle", new LatLng(52.5167747,
-                6.083021899999949), "Overijssel"));
-        cityArrayList.add(new City("Lelystad", new LatLng(52.51853699999999,
-                5.471421999999961), "Flevoland"));
-        cityArrayList.add(new City ("Arnhem", new LatLng(51.9851034,
-                5.898729600000024), "Gelderland"));
-        cityArrayList.add(new City("Utrecht", new LatLng(52.09073739999999,
-                5.121420100000023), "Utrecht"));
-        cityArrayList.add(new City("Haarlem", new LatLng(52.3873878,
-                4.646219400000064), "Noord-Holland"));
-        cityArrayList.add(new City("Den_Haag", new LatLng(52.0704978,
-                4.3006999000000405), "Zuid-Holland"));
-        cityArrayList.add(new City("Middelburg", new LatLng(51.49879620000001,
-                3.610997999999995), "Zeeland"));
-        cityArrayList.add(new City(" \t's-Hertogenbosch", new LatLng(51.69781620000001,
-                5.303674799999953), "Noord-Brabant"));
-        cityArrayList.add(new City("Maastricht", new LatLng(50.8513682,
-                5.6909725000000435),  "Limburg"));
-        cityArrayList.add(new City("Amsterdam", new LatLng(52.3679843,
-                4.903561399999944),  "Nederland"));
-
         setPokemon();
     }
 
     // The function that makes the request
     public void setPokemon(){
-        if (amountRequested < 13) {
+        if (amountRequested < cityArrayList.size()) {
             PokeRequest poke = new PokeRequest(this);
             poke.getPokemon(this);
         }
@@ -150,7 +124,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void setOverlay(){
         // If there is a overlay, remove it and display message
         if (overlay != null) {
-            amountFound ++;
             Toast toast = Toast.makeText(this, answerPokemonName
                             + " is succesvol gevangen!", Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);
@@ -159,7 +132,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         // Get Random number
-        int randomNum = ThreadLocalRandom.current().nextInt(0, 13 - amountFound);
+        int randomNum = ThreadLocalRandom.current().nextInt(0, cityArrayList.size());
 
         // Get city
         final City answerCity = cityArrayList.get(randomNum);
@@ -174,17 +147,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         target = new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+                int width = (mode.equals("NE") ? 50000 : 2000);
                 GroundOverlayOptions pokemonSprite = new GroundOverlayOptions().image(
                         BitmapDescriptorFactory.fromBitmap(bitmap)).position(answerCity.coordinates,
-                        1000);
+                        width);
                 overlay = mMap.addGroundOverlay(pokemonSprite);
                 overlay.setClickable(true);
+                overlay.setVisible(false);
 
                 TextView hint = findViewById(R.id.maps_clue);
-                hint.setText("Er is een pokemon gezien in de hoofdstad van " + answerCity.hint
-                        + "!");
+                int randomNum = ThreadLocalRandom.current().nextInt(0, 2);
+                if (randomNum == 0){
+                    hint.setText("Er is een pokemon gezien in de stad " + answerCity.name + "!");
+                }
+                else{
+                    hint.setText("Er is een pokemon gezien in de hoofdstad van " + answerCity.hint
+                            + "!");
+                }
                 TextView remaining = findViewById(R.id.maps_counter);
-                remaining.setText("Gevangen: " + amountFound + "/13");
+                remaining.setText("Nog " + (cityArrayList.size() + 1) + " Pokemon!");
             }
             @Override
             public void onBitmapFailed(Drawable errorDrawable) {
@@ -214,8 +195,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     // This function centers the screen
     public void setCenter (View view) {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.363407,5.191517),
-                (float) 6.9));
+        LatLng center = (mode.equals("NE") ? new LatLng(64,5.2) :
+                new LatLng(52.363407,5.191517));
+        float zoom = mode.equals("NE") ? (float) 3.2 : (float) 6.9;
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(center, zoom));
     }
 
     // This function let the user return to the home screen
@@ -236,7 +219,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         @Override
         public void onCameraMove() {
             float zoom = mMap.getCameraPosition().zoom;
-            overlay.setVisible((zoom > 12));
+            int zoomLevel = (mode.equals("NE") ? 7 : 12);
+            overlay.setVisible((zoom > zoomLevel));
         }
     }
 
@@ -244,9 +228,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private class OnGroundOverlayClickListener implements GoogleMap.OnGroundOverlayClickListener {
         @Override
         public void onGroundOverlayClick(GroundOverlay groundOverlay) {
-            float zoom = mMap.getCameraPosition().zoom;
-            if (zoom > 12){
-                if (amountFound == 12){
+            if (overlay.isVisible()){
+                if (cityArrayList.size() == 0){
                     overlay.remove();
                     Intent intent = new Intent(MapsActivity.this, ScoreActivity.class);
                     Chronometer timer = findViewById(R.id.maps_time);

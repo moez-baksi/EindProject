@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".ControlActivity">
 
+    <Button
+        android:id="@+id/control_ne"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="goStartNE"
+        android:text="@string/hoofdsteden_van_noord_europa"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/control_message"
         android:layout_width="0dp"
@@ -30,39 +45,26 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/toriall"
-        app:layout_constraintBottom_toTopOf="@+id/control_start"
+        app:layout_constraintBottom_toTopOf="@+id/control_nl"
         app:layout_constraintDimensionRatio="h,"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/control_message" />
 
     <Button
-        android:id="@+id/control_start"
+        android:id="@+id/control_nl"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="goStart"
-        android:text="@string/start"
+        android:onClick="goStartNL"
+        android:text="@string/provincies_van_nederland"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/control_back"
+        app:layout_constraintBottom_toTopOf="@+id/control_ne"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/control_back"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="goBack"
-        android:text="@string/back"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
