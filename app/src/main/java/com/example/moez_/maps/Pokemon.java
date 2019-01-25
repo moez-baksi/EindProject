@@ -1,16 +1,15 @@
+/* This class is involved making pokemon with a name and a url */
+
 package com.example.moez_.maps;
 
-import android.graphics.Bitmap;
-
-public class Pokemon {
+class Pokemon {
         String name;
         String url;
-        Bitmap image;
 
-        public Pokemon(String name, String url, Bitmap image) {
+        // Constructor
+        Pokemon(String name, String url) {
             this.name = name;
             this.url = url;
-            this.image = image;
         }
 
 }

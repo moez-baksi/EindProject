@@ -1,14 +1,17 @@
+/* This class has functions that returns array lists that contain the cities */
+
 package com.example.moez_.maps;
 
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
-public class ListCities {
-    public ListCities() {
+class ListCities {
+    ListCities() {
     }
 
-    public ArrayList<City> getNetherlands(){
+    // Function that returns the cities of The Netherlands
+    ArrayList<City> getNetherlands(){
         ArrayList<City> cityArrayList = new ArrayList<>();
         cityArrayList.add(new City("Groningen", new LatLng(53.2193835,
                 6.566501700000003), "Groningen"));
@@ -39,7 +42,8 @@ public class ListCities {
         return cityArrayList;
     }
 
-    public ArrayList<City> getNorthEurope(){
+    // Function that returns the cities of Northern Europe
+    ArrayList<City> getNorthEurope(){
         ArrayList<City> cityArrayList = new ArrayList<>();
         cityArrayList.add(new City("Reykjavik", new LatLng(64.15,
                 -21.95),  "Ijsland"));
@@ -64,7 +68,8 @@ public class ListCities {
         return cityArrayList;
     }
 
-    public ArrayList<City> getWestEurope(){
+    // Function that returns the cities of Western Europe
+    ArrayList<City> getWestEurope(){
         ArrayList<City> cityArrayList = new ArrayList<>();
         cityArrayList.add(new City("Parijs", new LatLng(48.86,
                 2.35),  "Frankrijk"));

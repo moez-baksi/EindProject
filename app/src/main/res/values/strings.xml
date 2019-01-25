@@ -4,26 +4,27 @@
 
     <string name="back">Terug</string>
     <string name="loading">Laden</string>
-    <string name="stop">Stoppen</string>
-    <string name="start">Spelen</string>
+    <string name="quit">Stoppen</string>
+    <string name="play">Spelen</string>
     <string name="results">Resultaten</string>
+    <string name="center">Centreer</string>
+    <string name="view">weergeven</string>
 
-    <string name="main_welcome">Welkom! \n Wij hebben jouw topografie kennis nodig!
+    <string name="main_title">Welkom! \n Wij hebben jouw topografie kennis nodig!
         Er lopen pokemon los in verschillende steden. Kun jij ze zo snel mogelijk voor ons
         verzamelen?</string>
-
-    <string name="a_pokeball">A pokeball</string>
     <string name="res_title">Dit zijn jouw tot nu behaalde resultaten!</string>
-    <string name="centreer">Centreer</string>
+    <string name="select_title">Van welke activiteit wil je de resultaten zien?</string>
+    <string name="control_title"><![CDATA[Gebruik twee vingers om in en uit te zoomen &
+        klik op een Pokemon om hem te vangen!]]></string>
 
-    <string name="help"><![CDATA[Gebruik twee vingers om in en uit te zoomen & klik op een Pokemon
-        om hem te vangen!]]></string>
-    <string name="van_welke_activitetit_wil_je_de_resultaten_zien">Van welke activitetit wil je de resultaten zien?</string>
-    <string name="weergeven">weergeven</string>
+    <string name="main_image">A pokeball</string>
+    <string name="select_imageDescription">A cute picture of a pokemon and its trainer</string>
 
-    <string-array name="options">
+    <string-array name="game_modes">
         <item>Provincies van Nederland</item>
         <item>Hoofdsteden van Noord Europa</item>
         <item>Hoofdsteden van West Europa</item>
     </string-array>
+
 </resources>

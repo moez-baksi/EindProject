@@ -1,3 +1,5 @@
+/* This class is involved requesting the pokemon from its API and returning it */
+
 package com.example.moez_.maps;
 
 import android.content.Context;
@@ -40,7 +42,7 @@ public class PokeRequest implements  Response.Listener<JSONObject>, Response.Err
             String name = response.getString("name");
             JSONObject sprites = response.getJSONObject("sprites");
             String url = sprites.getString("front_default");
-            temp = new Pokemon(name, url, null);
+            temp = new Pokemon(name, url);
         } catch (JSONException e) {
             e.printStackTrace();
         }

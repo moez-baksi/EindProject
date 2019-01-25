@@ -1,3 +1,5 @@
+/* This activity has the GIF which explains the game and let the user select a mode */
+
 package com.example.moez_.maps;
 
 import android.content.Intent;
@@ -7,7 +9,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import java.util.ArrayList;
 
 public class ControlActivity extends AppCompatActivity {
 
@@ -18,12 +19,13 @@ public class ControlActivity extends AppCompatActivity {
         setContentView(R.layout.activity_control);
 
         Spinner spinner = findViewById(R.id.control_spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.options, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.game_modes, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
     }
 
-    // This function starts up thegame
+    // This function starts up the game in de selected mode
     public void goStart (View view) {
         Intent intent = new Intent(ControlActivity.this, MapsActivity.class);
         Spinner spinner = findViewById(R.id.control_spinner);

@@ -1,3 +1,4 @@
 <resources>
-    <string name="google_maps_key" translatable="false">AIzaSyBU1ixhJROKSWfPoR8skDHYYqk7iaiLC-c</string>
+    <string name="google_maps_key" translatable="false">
+        AIzaSyBU1ixhJROKSWfPoR8skDHYYqk7iaiLC-c</string>
 </resources>

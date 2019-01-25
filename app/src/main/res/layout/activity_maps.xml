@@ -61,7 +61,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="goReturn"
-        android:text="@string/stop"
+        android:text="@string/quit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,7 +88,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="setCenter"
-        android:text="@string/centreer"
+        android:text="@string/center"
         app:layout_constraintStart_toEndOf="@+id/maps_stop"
         app:layout_constraintTop_toTopOf="parent" />
 

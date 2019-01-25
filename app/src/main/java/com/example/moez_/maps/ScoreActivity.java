@@ -1,9 +1,10 @@
+/* This activity is used to display the scores based on the mode*/
+
 package com.example.moez_.maps;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TableLayout;
@@ -81,7 +82,7 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     // This function let the user return to the home screen
-    public void gpBack (View view) {
+    public void goBack(View view) {
         Intent intent = new Intent(ScoreActivity.this, MainActivity.class);
         startActivity(intent);
     }

@@ -1,13 +1,13 @@
+/* This activity is the main game, that displays information based on the requests and mode*/
+
 package com.example.moez_.maps;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Chronometer;
@@ -66,24 +66,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         pokemonArrayList = new ArrayList<>();
         ListCities listCity = new ListCities();
 
-        // Set mode specific variables
+        // Set mode specific variables using the special variables
         if (mode == 1){
             // Netherlands
             cityArrayList = listCity.getNetherlands();
-            modeSpecificVar = new ModeSpecificVar(mode, 3500, (float) 6.9, (float) 11 ,new LatLng(52.363407,5.191517), new LatLng(50.8, 3.27), new LatLng(53.34, 7.21));
+            modeSpecificVar = new ModeSpecificVar(mode, 3500, (float) 6.9, (float) 11 ,
+                    new LatLng(52.363407,5.191517), new LatLng(50.8, 3.27),
+                    new LatLng(53.34, 7.21));
         }
         else if (mode == 2){
-            // North EU
+            // Northern Europe
             cityArrayList = listCity.getNorthEurope();
-            modeSpecificVar = new ModeSpecificVar(mode, 50000, (float) 3.2, (float) 7,new LatLng(64,5.2), new LatLng(47, - 25), new LatLng(70, 33));
+            modeSpecificVar = new ModeSpecificVar(mode, 50000, (float) 3.2, (float) 7,
+                    new LatLng(64,5.2), new LatLng(47, - 25),
+                    new LatLng(70, 33));
         }
         else {
-            // West Eu
+            // Western Europe
             cityArrayList = listCity.getWestEurope();
-            modeSpecificVar = new ModeSpecificVar(mode, 50000, (float) 4, (float) 7.5, new LatLng(47, 4), new LatLng(32, -17), new LatLng(57, 20));
+            modeSpecificVar = new ModeSpecificVar(mode, 50000, (float) 4, (float) 7.5,
+                    new LatLng(47, 4), new LatLng(32, -17),
+                    new LatLng(57, 20));
         }
     }
-
 
     // Manipulates the map once available.
     @Override
@@ -95,12 +100,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setRotateGesturesEnabled(false);
 
         // Move the camera so it centers perfectly
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(modeSpecificVar.center, modeSpecificVar.zoomStart));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(modeSpecificVar.center,
+                modeSpecificVar.zoomStart));
 
         // Set listeners
         mMap.setOnCameraMoveListener(new OnCameraMoveListener());
         mMap.setOnGroundOverlayClickListener(new OnGroundOverlayClickListener());
-        mMap.setLatLngBoundsForCameraTarget(new LatLngBounds(modeSpecificVar.southWest, modeSpecificVar.northEast));
+        mMap.setLatLngBoundsForCameraTarget(new LatLngBounds(modeSpecificVar.southWest,
+                modeSpecificVar.northEast));
 
         // Obtain the cities, pokemon, set time and start function
         setPokemon();
@@ -144,7 +151,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final City answerCity = cityArrayList.get(randomNum);
         cityArrayList.remove(randomNum);
 
-        // Get pokemon
+        // Get pokemon and store name
         Pokemon answerPokemon = pokemonArrayList.get(randomNum);
         answerPokemonName = answerPokemon.name.toUpperCase();
         pokemonArrayList.remove(randomNum);
@@ -180,6 +187,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onPrepareLoad(Drawable placeHolderDrawable) {
             }
         };
+
         // Set Image
         Picasso.with(this).load(answerPokemon.url).into(target);
     }
@@ -201,7 +209,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     // This function centers the screen
     public void setCenter (View view) {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(modeSpecificVar.center,modeSpecificVar.zoomStart));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(modeSpecificVar.center,
+                modeSpecificVar.zoomStart));
     }
 
     // This function let the user return to the home screen
