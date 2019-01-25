@@ -56,5 +56,6 @@ Besloten om ook noord europa te implementeren, daarnaast kleine aanpassingen ged
 passen.
 
 # Dag 13 - Vrijdag 25 jan 2019: (v 0.44)
-Besloten om layout te veranderen naar spinners om het overzichtelijker te maken.
+Besloten om layout te veranderen naar spinners om het overzichtelijker te maken. Daarnaast ook design veranderd door alles wat kleiner 
+te maken dan het eerst was.
 
