@@ -7,26 +7,23 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import java.util.ArrayList;
+public class SelectionActivity extends AppCompatActivity {
 
-public class ControlActivity extends AppCompatActivity {
-
-    // On create function
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_control);
+        setContentView(R.layout.activity_result_selection);
 
-        Spinner spinner = findViewById(R.id.control_spinner);
+        Spinner spinner = findViewById(R.id.selection_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.options, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
     }
 
     // This function starts up thegame
-    public void goStart (View view) {
-        Intent intent = new Intent(ControlActivity.this, MapsActivity.class);
-        Spinner spinner = findViewById(R.id.control_spinner);
+    public void goResults (View view) {
+        Intent intent = new Intent(SelectionActivity.this, ScoreActivity.class);
+        Spinner spinner = findViewById(R.id.selection_spinner);
         int position =  spinner.getSelectedItemPosition() + 1;
         intent.putExtra("MODE", position);
         startActivity(intent);

@@ -3,6 +3,7 @@ package com.example.moez_.maps;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TableLayout;
@@ -22,18 +23,22 @@ public class ScoreActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         int userScore = intent.getIntExtra("score", 0);
-        int mode = intent.getIntExtra("mode", 0);
+        int mode = intent.getIntExtra("MODE", 0);
         ScoreDatabase scoreDatabase = ScoreDatabase.getInstance(getApplicationContext());
 
         if (userScore > 1){
                 scoreDatabase.insert(userScore, mode);
                 TextView textView = findViewById(R.id.score_title);
                 if (mode == 1){
+                    textView.setText(String.format("Nederland: \n " +
+                            "Je hebt een score van %s seconden!", userScore));
+                }
+                else if (mode == 2){
                     textView.setText(String.format("Noord Europa: \n " +
                             "Je hebt een score van %s seconden!", userScore));
                 }
                 else{
-                    textView.setText(String.format("Nederland: \n " +
+                    textView.setText(String.format("West Europa: \n " +
                             "Je hebt een score van %s seconden!", userScore));
                 }
         }

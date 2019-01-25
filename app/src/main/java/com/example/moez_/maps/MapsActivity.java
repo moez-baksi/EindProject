@@ -35,7 +35,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         PokeRequest.Callback {
 
     // Global variables
-    String mode;
     private GoogleMap mMap;
     private Target target;
     int amountRequested;
@@ -43,6 +42,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     ArrayList<City> cityArrayList;
     ArrayList<Pokemon> pokemonArrayList;
     GroundOverlay overlay;
+    ModeSpecificVar modeSpecificVar;
 
 
     // On create function
@@ -57,8 +57,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
+
         Intent intent = getIntent();
-        mode = intent.getStringExtra("MODE");
+        int mode = intent.getIntExtra("MODE", 0);
+
+        // Reset the amount founds
+        amountRequested = 0;
+        pokemonArrayList = new ArrayList<>();
+        ListCities listCity = new ListCities();
+
+        // Set mode specific variables
+        if (mode == 1){
+            // Netherlands
+            cityArrayList = listCity.getNetherlands();
+            modeSpecificVar = new ModeSpecificVar(mode, 3500, (float) 6.9, (float) 11 ,new LatLng(52.363407,5.191517), new LatLng(50.8, 3.27), new LatLng(53.34, 7.21));
+        }
+        else if (mode == 2){
+            // North EU
+            cityArrayList = listCity.getNorthEurope();
+            modeSpecificVar = new ModeSpecificVar(mode, 50000, (float) 3.2, (float) 7,new LatLng(64,5.2), new LatLng(47, - 25), new LatLng(70, 33));
+        }
+        else {
+            // West Eu
+            cityArrayList = listCity.getWestEurope();
+            modeSpecificVar = new ModeSpecificVar(mode, 50000, (float) 4, (float) 7.5, new LatLng(47, 4), new LatLng(32, -17), new LatLng(57, 20));
+        }
     }
 
 
@@ -72,29 +95,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setRotateGesturesEnabled(false);
 
         // Move the camera so it centers perfectly
-        LatLng center = (mode.equals("NE") ? new LatLng(64,5.2) :
-                new LatLng(52.363407,5.191517));
-        float zoom = mode.equals("NE") ? (float) 3.2 : (float) 6.9;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(center, zoom));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(modeSpecificVar.center, modeSpecificVar.zoomStart));
 
         // Set listeners
         mMap.setOnCameraMoveListener(new OnCameraMoveListener());
         mMap.setOnGroundOverlayClickListener(new OnGroundOverlayClickListener());
-
-        LatLng southWest = (mode.equals("NE") ? new LatLng(47, - 25) :
-                new LatLng(50.8, 3.27));
-        LatLng northEast = (mode.equals("NE") ? new LatLng(70, 33) :
-                new LatLng(53.34, 7.21));
-        mMap.setLatLngBoundsForCameraTarget(new LatLngBounds(southWest, northEast));
-
-        // Reset the amount founds
-        amountRequested = 0;
-        pokemonArrayList = new ArrayList<>();
-
-        // Create new lists
-        ListCities listCity = new ListCities();
-        cityArrayList = (mode.equals("NE") ? listCity.getNorthEurope() :
-                listCity.getNetherlands());
+        mMap.setLatLngBoundsForCameraTarget(new LatLngBounds(modeSpecificVar.southWest, modeSpecificVar.northEast));
 
         // Obtain the cities, pokemon, set time and start function
         setPokemon();
@@ -147,10 +153,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         target = new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                int width = (mode.equals("NE") ? 50000 : 2000);
                 GroundOverlayOptions pokemonSprite = new GroundOverlayOptions().image(
                         BitmapDescriptorFactory.fromBitmap(bitmap)).position(answerCity.coordinates,
-                        width);
+                        modeSpecificVar.width);
                 overlay = mMap.addGroundOverlay(pokemonSprite);
                 overlay.setClickable(true);
                 overlay.setVisible(false);
@@ -196,10 +201,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     // This function centers the screen
     public void setCenter (View view) {
-        LatLng center = (mode.equals("NE") ? new LatLng(64,5.2) :
-                new LatLng(52.363407,5.191517));
-        float zoom = mode.equals("NE") ? (float) 3.2 : (float) 6.9;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(center, zoom));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(modeSpecificVar.center,modeSpecificVar.zoomStart));
     }
 
     // This function let the user return to the home screen
@@ -220,8 +222,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         @Override
         public void onCameraMove() {
             float zoom = mMap.getCameraPosition().zoom;
-            int zoomLevel = (mode.equals("NE") ? 7 : 12);
-            overlay.setVisible((zoom > zoomLevel));
+            overlay.setVisible((zoom > modeSpecificVar.zoomVis));
         }
     }
 
@@ -236,10 +237,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Chronometer timer = findViewById(R.id.maps_time);
                     long score = SystemClock.elapsedRealtime() - timer.getBase();
                     int seconds = (int) TimeUnit.MILLISECONDS.toSeconds(score);
-//                    String userScore = String.format("%02d seconden", seconds);
                     intent.putExtra("score", seconds);
-                    int modeToInt = (mode.equals("NE") ? 1 : 2);
-                    intent.putExtra("mode", modeToInt);
+                    intent.putExtra("MODE", modeSpecificVar.mode);
                     startActivity(intent);
                 }
                 else{

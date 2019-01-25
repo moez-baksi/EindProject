@@ -49,6 +49,7 @@
             android:name=".ScoreActivity"
             android:configChanges="orientation|screenSize" />
         <activity android:name=".ControlActivity" />
+        <activity android:name=".SelectionActivity"></activity>
     </application>
 
 </manifest>

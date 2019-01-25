@@ -48,9 +48,12 @@ public class ScoreDatabase extends SQLiteOpenHelper {
         if (mode == 1){
             cursor = db.rawQuery("SELECT * FROM entries WHERE mode=1 ORDER BY score;", null);
         }
+        else if (mode == 2){
+            cursor = db.rawQuery("SELECT * FROM entries WHERE mode=2 ORDER BY score;", null);
+        }
         else
         {
-            cursor = db.rawQuery("SELECT * FROM entries WHERE mode=2 ORDER BY score;", null);
+            cursor = db.rawQuery("SELECT * FROM entries WHERE mode=3 ORDER BY score;", null);
         }
         ArrayList <Score> scores = new ArrayList<>();
         while (cursor.moveToNext()){

@@ -63,4 +63,29 @@ public class ListCities {
                 25.28),  "Litouwen"));
         return cityArrayList;
     }
+
+    public ArrayList<City> getWestEurope(){
+        ArrayList<City> cityArrayList = new ArrayList<>();
+        cityArrayList.add(new City("Parijs", new LatLng(48.86,
+                2.35),  "Frankrijk"));
+        cityArrayList.add(new City("Madrid", new LatLng(40.42,
+                -3.7),  "Spanje"));
+        cityArrayList.add(new City("Lissabon", new LatLng(38.71,
+                -9.14),  "Portugal"));
+        cityArrayList.add(new City("Bern", new LatLng(46.95,
+                7.45),  "Zwitserland"));
+        cityArrayList.add(new City("Wenen", new LatLng(48.21,
+                16.37),  "Oostenrijk"));
+        cityArrayList.add(new City("Rome", new LatLng(41.9,
+                12.5),  "Italië"));
+        cityArrayList.add(new City("Brussel", new LatLng(50.85,
+                4.35),  "België"));
+        cityArrayList.add(new City("Berlijn", new LatLng(52.52,
+                13.4),  "Duitsland"));
+        cityArrayList.add(new City("Amsterdam", new LatLng(52.3679843,
+                4.903561399999944),  "Nederland"));
+        cityArrayList.add(new City("Luxemburg", new LatLng(49.61,
+                6.13),  "Luxemburg"));
+        return cityArrayList;
+    }
 }
