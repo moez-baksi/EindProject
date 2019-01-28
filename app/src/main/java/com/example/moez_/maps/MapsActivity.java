@@ -2,6 +2,7 @@
 
 package com.example.moez_.maps;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -66,7 +67,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         pokemonArrayList = new ArrayList<>();
         ListCities listCity = new ListCities();
 
-        // Set mode specific variables using the special variables
+        // Set mode specific variables using the specific variables, each adjusted for the situation
         if (mode == 1){
             // Netherlands
             cityArrayList = listCity.getNetherlands();
@@ -77,14 +78,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         else if (mode == 2){
             // Northern Europe
             cityArrayList = listCity.getNorthEurope();
-            modeSpecificVar = new ModeSpecificVar(mode, 50000, (float) 3.2, (float) 7,
+            modeSpecificVar = new ModeSpecificVar(mode, 45000, (float) 3.2, (float) 7,
                     new LatLng(64,5.2), new LatLng(47, - 25),
                     new LatLng(70, 33));
         }
         else {
             // Western Europe
             cityArrayList = listCity.getWestEurope();
-            modeSpecificVar = new ModeSpecificVar(mode, 50000, (float) 4, (float) 7.5,
+            modeSpecificVar = new ModeSpecificVar(mode, 45000, (float) 4, (float) 7.5,
                     new LatLng(47, 4), new LatLng(32, -17),
                     new LatLng(57, 20));
         }
@@ -158,6 +159,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Set grounder overlay and update hint within picasso function
         target = new Target() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
                 GroundOverlayOptions pokemonSprite = new GroundOverlayOptions().image(

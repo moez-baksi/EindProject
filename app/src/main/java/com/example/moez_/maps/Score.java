@@ -12,4 +12,3 @@ class Score {
         this.score = score;
     }
 }
-

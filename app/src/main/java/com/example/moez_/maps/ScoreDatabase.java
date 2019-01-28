@@ -49,20 +49,9 @@ public class ScoreDatabase extends SQLiteOpenHelper {
     // Select all items in the database
     ArrayList<Score> selectAll(int mode){
         SQLiteDatabase db = getWritableDatabase();
-        Cursor cursor;
-        if (mode == 1){
-            cursor = db.rawQuery("SELECT * FROM entries WHERE mode=1 ORDER BY score;",
-                    null);
-        }
-        else if (mode == 2){
-            cursor = db.rawQuery("SELECT * FROM entries WHERE mode=2 ORDER BY score;",
-                    null);
-        }
-        else
-        {
-            cursor = db.rawQuery("SELECT * FROM entries WHERE mode=3 ORDER BY score;",
-                    null);
-        }
+        @SuppressLint("DefaultLocale") String sql = String.format("SELECT * FROM entries " +
+                "WHERE mode=%d ORDER BY score;", mode);
+        Cursor cursor = db.rawQuery(sql, null);
         ArrayList <Score> scores = new ArrayList<>();
         while (cursor.moveToNext()){
             String date = cursor.getString(cursor.getColumnIndexOrThrow("timestap"));
