@@ -7,7 +7,7 @@ Thereafter, this application is optimized for children aged between 8 and 12 yea
 #### User Interface:
 Homescreen of the app      |  Gameplay | Scores
 :-------------------------:|:-------------------------:|:-------------------------:
-![alt text](https://i.imgur.com/OvMZBs9.jpg)  |  ![alt text](name-of-giphy.gif)
+![alt text](https://i.imgur.com/OvMZBs9.jpg)  |  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif)
  |  ![alt text](https://i.imgur.com/OvMZBs9.jpg) 
 
 #### API's, external data sources and special thanks to:
