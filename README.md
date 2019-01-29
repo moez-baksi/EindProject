@@ -5,10 +5,13 @@ _Copyright (c) 2019 Moezammin Baksi_
 This application should be used for learning topography. Using hints and Pokemon, its goal is to make learning topography easier and more enjoyable. 
 Thereafter, this application is optimized for children aged between 8 and 12 years old, whereas it also is appropriate for everyone who wants to learn or refresh their topographic knowledge.
 #### User Interface:
-Homescreen of the app      |  Gameplay | Scores
-:-------------------------:|:-------------------------:|:-------------------------:
-![alt text](https://i.imgur.com/OvMZBs9.jpg)  |  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif)
- |  ![alt text](https://i.imgur.com/OvMZBs9.jpg) 
+Homescreen of the app | Gameplay | Selection | Scores
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/HomeScreen.png)  |  
+![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif)   |  
+![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/selection.png)   |
+![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/Scores.png)   
+
 
 #### API's, external data sources and special thanks to:
   * [Pokemon API](https://pokeapi.co)
