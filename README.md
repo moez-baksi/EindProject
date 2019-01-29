@@ -1,32 +1,27 @@
-## Pokémon: learn Topography
-#### Try to catch all pokemon as fast as possible
-#### Problem tackling: 
-A possible treatment for the incurable unavoidable affection called "Bored", whereas it also helps children learning topography.
-#### Targeted audience: 
-This app is optimized for bored children who like Pokémon, but also need to learn topography. 
-#### MVP:
-  * Will contain an x amount of Pokémon, depending on the amount of places. I will start with provinces
-  * Three screens:
-    * Start screen
-    * High scores at the end
-    * Map (main game)
-  * You can catch a Pokémon by tapping on it
-  * Pokémon will be randomly assigned a determined spot
-  * High scores will be saved, making it more fun to repeat the exercises. 
-##### Optional:
-  * Online database for the high scores
-  * Maybe multiple areas? I will start with provinces, but rivers/large cities is also possible. 
-  * Might change the idea into Amsterdam topography for tourists. 
-#### Data source?? 
-A database of the predetermined locations and a database of high scores.
-#### API's:
-  * https://pokeapi.co
-  * https://cloud.google.com/maps-platform/
-#### Hardest part: 
-Some complications might occur while understanding the API of Google maps. 
-#### Similar apps: 
-Google implemented a similar feature during an event in September 2016.
+## ** Topografie **: Learn Topography using Pokémon!
+######
+Copyright (c) 2019 Moezammin Baksi
+#### Purpose: 
+This application should be used for learning topography. Using hints and Pokemon, its goal is to make learning topography easier and more enjoyable. 
+Thereafter, this application is optimized for children aged between 8 and 12 years old, whereas it also is appropriate for everyone who wants to learn or refresh their topographic knowledge.
+#### User Interface:
+Homescreen of the app      |  Game | Scores
+:-------------------------:|:-------------------------:|:-------------------------:
+![alt text](https://github.com/moez-baksi/TicTacToe/blob/master/doc/Screenshot_2018-11-19-12-31-57%5B1%5D.png)  |  ![alt text](https://i.imgur.com/OvMZBs9.jpg) |  ![alt text](https://i.imgur.com/OvMZBs9.jpg) 
+
+#### API's and external data sources:
+  * Pokemon API: https://pokeapi.co
+  * Google Maps API: https://cloud.google.com/maps-platform/
+  * Pokeball image: https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG
+  * Pokemon image: http://vance.nl/verrassende-geschiedenis-woord-pokemon/
+  * Android Studio and it’s documentation https://developer.android.com/studio/
+https://developer.android.com/docs/
+  * Minor Programmeren http://www.mprog.nl/
+  * Stack Overflow https://stackoverflow.com/
+  * Volley https://developer.android.com/training/volley/
+  * Picasso http://square.github.io/picasso/
+  * Android GIF drawable https://github.com/koral--/android-gif-drawable
 
 
 
-![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/PlanToGainWorldDominance%20(2).png)
+
