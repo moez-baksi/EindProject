@@ -1,4 +1,4 @@
-/* This database class handels everything sql related. From selecting to inserting are included */
+/* This database class handles everything sql related. From selecting to inserting are included */
 
 package com.example.moez_.maps;
 

@@ -36,9 +36,9 @@ class ListCities {
         cityArrayList.add(new City(" \t's-Hertogenbosch", new LatLng(51.69781620000001,
                 5.303674799999953), "Noord-Brabant"));
         cityArrayList.add(new City("Maastricht", new LatLng(50.8513682,
-                5.6909725000000435),  "Limburg"));
+                5.6909725000000435), "Limburg"));
         cityArrayList.add(new City("Amsterdam", new LatLng(52.3679843,
-                4.903561399999944),  "Nederland"));
+                4.903561399999944), "Nederland"));
         return cityArrayList;
     }
 
@@ -46,25 +46,25 @@ class ListCities {
     ArrayList<City> getNorthEurope(){
         ArrayList<City> cityArrayList = new ArrayList<>();
         cityArrayList.add(new City("Reykjavik", new LatLng(64.15,
-                -21.95),  "Ijsland"));
+                -21.95), "Ijsland"));
         cityArrayList.add(new City("Dublin", new LatLng(53.31,
-                -6.233),  "Ierland"));
+                -6.233), "Ierland"));
         cityArrayList.add(new City("Londen", new LatLng(	51.5,
-                -0.083333),  "Verenigd Koninkrijk"));
+                -0.083333), "Verenigd Koninkrijk"));
         cityArrayList.add(new City("Kopenhagen", new LatLng(	55.66666667,
-                12.583333),  "Denemarken"));
-        cityArrayList.add(new City("Oslo", new LatLng(	59.91666667,
-                10.75),  "Noorwegen"));
-        cityArrayList.add(new City("Stockholm", new LatLng(		59.33333333,
-                18.05),  "Zweden"));
-        cityArrayList.add(new City("Helsinki", new LatLng(		60.16666667,
-                24.933333),  "Finland"));
-        cityArrayList.add(new City("Riga", new LatLng(				56.95,
-                24.1),  "Letland"));
-        cityArrayList.add(new City("Talinn", new LatLng(		59.43333333,
-                24.716667),  "Estland"));
-        cityArrayList.add(new City("Vilnius", new LatLng(		54.68333333,
-                25.28),  "Litouwen"));
+                12.583333), "Denemarken"));
+        cityArrayList.add(new City("Oslo", new LatLng(59.91666667,
+                10.75), "Noorwegen"));
+        cityArrayList.add(new City("Stockholm", new LatLng(59.33333333,
+                18.05), "Zweden"));
+        cityArrayList.add(new City("Helsinki", new LatLng(60.16666667,
+                24.933333), "Finland"));
+        cityArrayList.add(new City("Riga", new LatLng(56.95,
+                24.1), "Letland"));
+        cityArrayList.add(new City("Talinn", new LatLng(	59.43333333,
+                24.716667), "Estland"));
+        cityArrayList.add(new City("Vilnius", new LatLng(54.68333333,
+                25.28), "Litouwen"));
         return cityArrayList;
     }
 
@@ -76,11 +76,11 @@ class ListCities {
         cityArrayList.add(new City("Madrid", new LatLng(40.42,
                 -3.7),  "Spanje"));
         cityArrayList.add(new City("Lissabon", new LatLng(38.71,
-                -9.14),  "Portugal"));
+                -9.1),  "Portugal"));
         cityArrayList.add(new City("Bern", new LatLng(46.95,
                 7.45),  "Zwitserland"));
         cityArrayList.add(new City("Wenen", new LatLng(48.21,
-                16.37),  "Oostenrijk"));
+                16.37), "Oostenrijk"));
         cityArrayList.add(new City("Rome", new LatLng(41.9,
                 12.5),  "Italië"));
         cityArrayList.add(new City("Brussel", new LatLng(50.85,

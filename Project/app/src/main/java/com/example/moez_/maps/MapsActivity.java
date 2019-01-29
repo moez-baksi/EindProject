@@ -169,6 +169,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 overlay.setClickable(true);
                 overlay.setVisible(false);
 
+                // This specific code is responsible for a 50% chance for the kind of tips
                 TextView hint = findViewById(R.id.maps_clue);
                 int randomNum = ThreadLocalRandom.current().nextInt(0, 2);
                 if (randomNum == 0){
