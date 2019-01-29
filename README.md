@@ -13,6 +13,9 @@ Homescreen of the app      |  Game | Scores
   * [Pokemon API](https://pokeapi.co)
   * [Google Maps API](https://cloud.google.com/maps-platform/)
   
+  * [Capital cities](https://nl.wikipedia.org/wiki/Lijst_van_hoofdsteden)
+  * [Coordinates](https://www.coordinatenbepalen.nl/)
+  
   * [Pokeball image](https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG)
   * [Pokemon image](http://vance.nl/verrassende-geschiedenis-woord-pokemon/)
   
