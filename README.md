@@ -17,7 +17,7 @@ Homescreen of the app      |  Game | Scores
   * [Coordinates](https://www.coordinatenbepalen.nl/)
   
   * [Pokeball image](https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG)
-  * [Pokemon image](http://vance.nl/verrassende-geschiedenis-woord-pokemon/)
+  * [Ash + Pikachu image](http://vance.nl/verrassende-geschiedenis-woord-pokemon/)
   
   * [Volley](https://developer.android.com/training/volley/)
   * [Picasso](http://square.github.io/picasso/)
