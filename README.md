@@ -1,13 +1,13 @@
 ## **Topografie** : Learn Topography using Pokémon!
 ######
-Copyright (c) 2019 Moezammin Baksi
+_Copyright (c) 2019 Moezammin Baksi_
 #### Purpose: 
 This application should be used for learning topography. Using hints and Pokemon, its goal is to make learning topography easier and more enjoyable. 
 Thereafter, this application is optimized for children aged between 8 and 12 years old, whereas it also is appropriate for everyone who wants to learn or refresh their topographic knowledge.
 #### User Interface:
 Homescreen of the app      |  Game | Scores
 :-------------------------:|:-------------------------:|:-------------------------:
-![alt text](https://github.com/moez-baksi/TicTacToe/blob/master/doc/Screenshot_2018-11-19-12-31-57%5B1%5D.png)  |  ![alt text](https://i.imgur.com/OvMZBs9.jpg) |  ![alt text](https://i.imgur.com/OvMZBs9.jpg) 
+![alt text](https://i.imgur.com/OvMZBs9.jpg)  |  ![alt text](https://i.imgur.com/OvMZBs9.jpg) |  ![alt text](https://i.imgur.com/OvMZBs9.jpg) 
 
 #### API's, external data sources and special thanks to:
   * [Pokemon API](https://pokeapi.co)
