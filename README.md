@@ -7,10 +7,7 @@ Thereafter, this application is optimized for children aged between 8 and 12 yea
 #### User Interface:
 Homescreen of the app | Gameplay | Selection | Scores
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/HomeScreen.png" width="100" height="400" /> |
-<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif" width="100" height="400" /> |
-<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection.png" width="100" height="400" /> |
-<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/Scores.png" width="100" height="400" />   
+<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/HomeScreen.png" width="100" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif" width="100" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection.png" width="100" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/Scores.png" width="100" height="400" />   
 
 
 #### API's, external data sources and special thanks to:
