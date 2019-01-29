@@ -1,5 +1,4 @@
 ## Topografie: Learn Topography using Pokémon!
-###### Minimum SDK: API 26, 8.0 Oreo
 ######
 _Copyright (c) 2019 Moezammin Baksi_
 #### Purpose: 
@@ -28,3 +27,5 @@ Homescreen of the app | Gameplay | Selection | Scores
   * [Android Studio](https://developer.android.com/studio/) and it’s [documentation](https://developer.android.com/docs/)
   * [Minor Programmeren](http://www.mprog.nl/)
   * [Stack Overflow](https://stackoverflow.com/)
+
+###### Minimum SDK: API 26, 8.0 Oreo
