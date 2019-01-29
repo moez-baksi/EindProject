@@ -1,4 +1,4 @@
-## __*Topografie*__ : Learn Topography using Pokémon!
+## Topografie: Learn Topography using Pokémon!
 ######
 _Copyright (c) 2019 Moezammin Baksi_
 #### Purpose: 
