@@ -1,6 +1,5 @@
 ## Topografie: Learn Topography using Pokémon!
-###### Assignment of the Minor programming
-###### Minimum SDK: API 26: 8.0 Oreo
+###### Minimum SDK: API 26, 8.0 Oreo
 ######
 _Copyright (c) 2019 Moezammin Baksi_
 #### Purpose: 
