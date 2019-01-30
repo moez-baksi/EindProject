@@ -18,4 +18,4 @@ I will shortly describe the major changes I made in my plan.
 
 Original Plan              | Result
 :-------------------------:|:-------------------------:
-<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/HomeScreen.png" width="300" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif" width="300" height="400" /> 
+<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/old%20design.png" width="300" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/game1.png" width="300" height="400" /> 
