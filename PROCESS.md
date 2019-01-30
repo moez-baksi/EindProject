@@ -59,3 +59,11 @@ passen.
 Besloten om layout te veranderen naar spinners om het overzichtelijker te maken. Daarnaast ook design veranderd door alles wat kleiner 
 te maken dan het eerst was.
 
+# Dag 14 - Maandag 28 jan 2019: (v 0.51)
+Bugfixes.
+
+# Dag 15 - Dinsdag 29 jan 2019: (v 0.52)
+Bugfixes.
+
+# Dag 16 - Woensdag 30 jan 2019: (v 0.53)
+Bugfixes.
