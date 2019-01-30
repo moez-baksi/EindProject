@@ -11,7 +11,7 @@ Homescreen of the app | Gameplay | Selection | Scores
 
 
 #### API's, external data sources and special thanks to:
-  * [Pokemon API](https://pokeapi.co)
+  * [Pokemon API](https://pokeapi.co) (© 2013–2018 Paul Hallet and PokéAPI contributors. Pokémon and Pokémon character names are trademarks of Nintendo.)
   * [Google Maps API](https://cloud.google.com/maps-platform/)
   
   * [Capital cities](https://nl.wikipedia.org/wiki/Lijst_van_hoofdsteden)
