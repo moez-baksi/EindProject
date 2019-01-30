@@ -14,6 +14,7 @@ I will shortly describe the major changes I made in my plan.
 - To make it more stimulating, i decided to change the way i score the students. Instead the of finding as much places in a given time, I instead measure the time passed finding all the places, which serves as a stimulance. 
 
 **Design Changes**
+
 Original Plan              | Result
 :-------------------------:|:-------------------------:
 <img src="https://github.com/moez-baksi/EindProject/blob/master/doc/HomeScreen.png" width="350" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif" width="350" height="400" /> 
