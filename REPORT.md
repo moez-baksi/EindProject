@@ -16,4 +16,4 @@ I will shortly describe the major changes I made in my plan.
 **Design Changes**
 Original Plan      |  Result
 :-------------------------:|:-------------------------:
-![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/old%20design.png)  |  ![alt text](https://github.com/moez-baksi/EindProject/blob/master/doc/game1.png)
+<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/HomeScreen.png" width="350" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif" width="350" height="400" /> 
