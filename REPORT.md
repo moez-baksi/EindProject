@@ -25,7 +25,7 @@ I will shortly describe the major changes I made in my plan.
   
 Original Plan              | Result
 :-------------------------:|:-------------------------:
-<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/old%20design.png" width="300" height="420" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/game1.png" width="300" height="420" /> 
+<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/old%20design.png" width="300" height="450" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/game1.png" width="300" height="450" /> 
 
 - Selection / Control Activity
   - I made a selection and a control activity in order to let the user select a region. This was not included in the original plan, but  was added when there was some time left.
@@ -34,5 +34,5 @@ Original Plan              | Result
   
 Control Activity           | Selection Activity
 :-------------------------:|:-------------------------:
-<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection.png" width="300" height="420" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection2.png" width="300" height="420" /> 
+<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection.png" width="300" height="450" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection2.png" width="300" height="450" /> 
 
