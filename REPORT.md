@@ -32,7 +32,7 @@ Original Plan              | Result
   - The purpose of the selection activity is purely to select of which region the results should be displayed. 
   - The purpose of the control activity is to select in what region you want to play. Thereby, there is also a [GIF](https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif) which displays how the game should be played.
   
-  Original Plan              | Result
+Control Activity           | Selection Activity
 :-------------------------:|:-------------------------:
 <img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection.png" width="300" height="420" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection2.png" width="300" height="420" /> 
 
