@@ -24,6 +24,7 @@ I will shortly describe the major changes I made in my plan.
 - Replaced the tip to the bottom to balance the map more in the middle.
 - Decided to create two different tips (city name or country name), which stimulates the learning process.
 - Decided to keep the labels of the city names, but less visible, so if you are tuck you can always waste time by trying to read it. 
+- Chose to leave the colors of the terrain present on the map, which usually lacks on topographic maps. This gives less the feeling that you are learning something, which stimulates children.
   
 Original Plan              | Result
 :-------------------------:|:-------------------------:
