@@ -19,12 +19,12 @@ This application is designed to help children learn and enjoy learning topograph
   
 - ControlActivity: This activity is to explain the user how to play the game and select a region, where the user wanna play its game.
   - onCreate(), this function also sets up the adapter for the spinner and its elements.
-  - goStart(), this function checks what the user selected, and starts up the MapsActivity, giving via intent.putExtra the seleccted game mode.
+  - goStart(), this function checks what the user selected, and starts up the MapsActivity, giving via intent.putExtra the selected game mode.
  
  
 - MapsActivity: This activity is the activity which is responsible for the whole game, it contains a map fragment, a stop button, a center button, a chronometer, a remaining count and a hint.
-  - onCreate(), this function prepares map asynconyous, gets the mode from the intent, sets up the mode specific variables and prepares the hardcoded cities.
-  - onMapReady(), this function is called when the Map is prepared. Here the mapstyles are edited, specific gestures are disabled and the camerea is moved. Thereby are the CameraMoveListener, CameraBounds and onGroundOverlayclick listeners set up. Afterwards the right amount of pokemon are requested from the pokemon API. Thereafter it also calls a function to start up the chronometer.
+  - onCreate(), this function prepares map asynchronous, gets the mode from the intent, sets up the mode specific variables and prepares the hardcoded cities.
+  - onMapReady(), this function is called when the Map is prepared. Here the mapstyles are edited, specific gestures are disabled and the camera is moved. Thereby are the CameraMoveListener, CameraBounds and onGroundOverlayclick listeners set up. Afterwards the right amount of pokemon are requested from the pokemon API. Thereafter it also calls a function to start up the chronometer.
   - setOverlay(), this function sets up a overlay on the map, which is clickable and only visible if the user is zoomed enough on the map. Thereby is this function also responsible downloading the image (using picasso) provided by the pokemon API. The hint is also updated and the remaining count of the pokemon. 
   - If the user is finished, the ScoreActivity is started, providing the score using an itent.
   - setCenter(), this function sets up the camera, which will be centered based on which region the user selected.
@@ -37,7 +37,7 @@ This application is designed to help children learn and enjoy learning topograph
   - goStart(), this function checks what the user selected in the spinner, and starts up the ScoreActivity, giving via intent.putExtra the selected game mode.
   
   
-- ScoreActivity: this activity views the resuls of a specific game mode sorted and based on the selected mode.
+- ScoreActivity: this activity views the results of a specific game mode sorted and based on the selected mode.
   - onCreate(), this function gets the score and mode using intent, and puts it in the SQL database. Thereafter all the data entries are requested, and put in a table. 
   - setTableProperties(), this function sets up a textview with the same properties as all the others.
   - onBackPressed(), this function is to disable navigation button.
@@ -47,7 +47,7 @@ This application is designed to help children learn and enjoy learning topograph
   - City, this class is used to create 'City' variables.
   - ListCities, this class contains the hardcoded cities.
   - ModeSpecificVar, this class is used to hold mode specific variables, which are created in the mapsactivity.\
-  - PokeRequest, to handle all the web, volley and callbackstuff with the pokemon API.
+  - PokeRequest, to handle all the web, volley and callback stuff with the pokemon API.
   - Pokemon, this class is used to create 'Pokemon' variables.
   - Score, this class is used to create 'Score' variables.
   - ScoreDatabase, this database class handels all the SQL stuff, such as insert() and selectAll()
@@ -86,4 +86,16 @@ Original Plan              | Result
 Control Activity           | Selection Activity
 :-------------------------:|:-------------------------:
 <img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection.png" width="300" height="450" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection2.png" width="300" height="450" /> 
+
+
+## Argument + Challenges
+The first challenge I faced when I started to work on this project, was the lack of a fun element. The original idea was to let the user catch as many pokemon as possible. But to change the public of my application, I decided to change that into a more map focussed game. Instead of catching all the pokemon, the primary goal was to get familiar with the different places on google maps. Hence the idea of pokemon topography was born. The goal of the whole application was changes, however the implementation remained the same.
+
+When I started to implement the idea, I stumbled over the map. The API I chose, had so many options which left me in the dark. I had no idea where to start and eventually blacked out. The day after I decided to continue with the default settings and look afterward to all the options. I am not one hundred percent happy with how the map looks now. For now I made the labels white, but they were present. When I tried to remove itm the dots (which indicated cities) would also disappear. In ideal situation the dots would be visible, but the labels would have been removed. 
+
+A lot of problems were also caused by the pokemon API. Initially I thought you would receive an image with the API, but I received an image link. In order to display an image, I had to download it and convert it to bitmap. There is no direct way to do this in android, so I wasted too much time trying to combine standard functions in asynchronous classes. I gave up after a couple of DAYS, and used picasso instead, which works like a charm. 
+
+The score activity is also not what I wanted it to be. I feel like the whole screen lacks something, an image for example. But I could not find anything that suited. I chose the way it looks now, because it is simple but yet effective. 
+
+If I had more time, I think I would have implemented a lot more regions. Also an option to combine multiple regions would have been awesome. Thereby, I also would have wanted an online database for the scores, so you can not lose your progress if you lost your phone. Also a fun idea would have been an options menu, where you could select if you wanted labels, or select which pokemon you wanted to play with. But After all i’m really happy with the application I made.
 
