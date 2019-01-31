@@ -1,11 +1,43 @@
 # Report
 This application is designed to help children learn and enjoy learning topography.
 
+
 ## Navigation
 <img src="https://github.com/moez-baksi/EindProject/blob/master/doc/planOverview.png" />
 
+
 ## Technical details, with classes
 <img src="https://github.com/moez-baksi/EindProject/blob/master/doc/planDetail.png" />
+
+Here is a short description of the activities and their functions. 
+- MainActivity: This is the main activity that the user will see, with a welcome text, an image, and two buttons which redirects you to either the control activity or the selection activity.
+  - onCreate()
+  - goStart(), starts up the control activity.
+  - goScores(), starts up the selection activity.
+  - onBackPressed() is a function to disable navigation button.
+  
+- ControlActivity: This activity is to explain the user how to play the game and select a region, where the user wanna play its game.
+  - onCreate(), this function also sets up the adapter for the spinner and its elements.
+  - goStart(), this function checks what the user selected, and starts up the MapsActivity, giving via intent.putExtra the seleccted game mode.
+ 
+- MapsActivity: This activity is the activity which is responsible for the whole game, it contains a map fragment, a stop button, a center button, a chronometer, a remaining count and a hint.
+  - onCreate(), this function prepares map asynconyous, gets the mode from the intent, sets up the mode specific variables and prepares the hardcoded cities.
+  - onMapReady(), this function is called when the Map is prepared. Here the mapstyles are edited, specific gestures are disabled and the camerea is moved. Thereby are the CameraMoveListener, CameraBounds and onGroundOverlayclick listeners set up. Afterwards the right amount of pokemon are requested from the pokemon API. Thereafter it also calls a function to start up the chronometer.
+  - setOverlay(), this function sets up a overlay on the map, which is clickable and only visible if the user is zoomed enough on the map. Thereby is this function also responsible downloading the image (using picasso) provided by the pokemon API. The hint is also updated and the remaining count of the pokemon. 
+  - If the user is finished, the ScoreActivity is started, providing the score using an itent.
+  - setCenter(), this function sets up the camera, which will be centered based on which region the user selected.
+  - goReturn(), this function stops the game.
+  - onBackPressed(), this function is to disable navigation button.
+  
+- SelectionActivity: this activity lets the user select which results the user wants to see.
+  - onCreate(), this function also sets up the adapter for the spinner and its elements.
+  - goStart(), this function checks what the user selected in the spinner, and starts up the ScoreActivity, giving via intent.putExtra the selected game mode.
+  
+- ScoreActivity: this activity views the resuls of a specific game mode sorted and based on the selected mode.
+ - onCreate(), this function gets the score and mode using intent, and puts it in the SQL database. Thereafter all the data entries are requested, and put in a table. 
+ - setTableProperties(), this function sets up a textview with the same properties as all the others.
+ - onBackPressed(), this function is to disable navigation button.
+
 
 ## Changes:
 I will shortly describe the major changes I made in my plan.
@@ -14,6 +46,7 @@ I will shortly describe the major changes I made in my plan.
 - Quickly realised there was a major game element missing. It was not a "fun" game, so I decided to change my plan. At first the primary goal was to catch all the pokemon, whereas the secondary goal was to learn some placed on the map. Instead making an application for only the fun, the plan changed to focus more on the Maps API rather than the Pokemon API. Hence the idea for making it a **topography learning application**. Instead of catching all the pokemon as fast possible, the primary goal changed to remember certain places, using the pokemon API to make it more attractive to the younger students. 
 - To make it more stimulating, i decided to change the way i score the students. Instead the of finding as much places in a given time, I instead **measure the time passed** finding all the places, which serves as a stimulance. 
 - Due the time, it was possible to add another two regions, instead of only the the provinces. Due a random selection process, the regions Northern and Western Europe were added.
+
 
 ### Design Changes:
 
