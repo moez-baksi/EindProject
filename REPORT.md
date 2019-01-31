@@ -10,7 +10,7 @@ This application is designed to help children learn and enjoy learning topograph
 <img src="https://github.com/moez-baksi/EindProject/blob/master/doc/planDetail.png" />
 
 ### Here is a short description of the activities and their functions. 
-#### - MainActivity: This is the main activity that the user will see, with a welcome text, an image, and two buttons which redirects you to either the control activity or the selection activity.
+- MainActivity: This is the main activity that the user will see, with a welcome text, an image, and two buttons which redirects you to either the control activity or the selection activity.
   - onCreate()
   - goStart(), starts up the control activity.
   - goScores(), starts up the selection activity.
