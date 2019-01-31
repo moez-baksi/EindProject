@@ -1,7 +1,5 @@
 ## Topografie: Learn Topography using Pokémon!
 
-###### _Copyright (c) 2019 Moezammin Baksi_
-
 #### Purpose: 
 This application should be used for learning topography. Using hints and Pokemon, its goal is to make learning topography easier and more enjoyable. 
 Thereafter, this application is optimized for children aged between 8 and 12 years old, whereas it also is appropriate for everyone who wants to learn or refresh their topographic knowledge.
@@ -31,5 +29,7 @@ Homescreen of the app | Gameplay | Selection | Scores
   * [Android Studio](https://developer.android.com/studio/) and it’s [documentation](https://developer.android.com/docs/) <sub><sup>Licensed under the Apache License, Version 2.0</sup></sub>
   * [Minor Programmeren](http://www.mprog.nl/)
   * [Stack Overflow](https://stackoverflow.com/)
+
+###### [Copyright (c) 2019 Moezammin Baksi](https://github.com/moez-baksi/EindProject/blob/master/LICENSE)
 
 ###### Minimum SDK: API 26, 8.0 Oreo
