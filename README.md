@@ -29,6 +29,8 @@ Homescreen of the app | Gameplay | Selection | Scores
   * [Android Studio](https://developer.android.com/studio/) and it’s [documentation](https://developer.android.com/docs/) <sub><sup>Licensed under the Apache License, Version 2.0</sup></sub>
   * [Minor Programmeren](http://www.mprog.nl/)
   * [Stack Overflow](https://stackoverflow.com/)
+  
+#### About
 
 ###### [Copyright (c) 2019 Moezammin Baksi](https://github.com/moez-baksi/EindProject/blob/master/LICENSE)
 
