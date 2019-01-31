@@ -1,18 +1,18 @@
 ## Topografie: Learn Topography using Pokémon!
 
-#### Purpose: 
+### Purpose: 
 This application should be used for learning topography. Using hints and Pokemon, its goal is to make learning topography easier and more enjoyable. 
 Thereafter, this application is optimized for children aged between 8 and 12 years old, whereas it also is appropriate for everyone who wants to learn or refresh their topographic knowledge.
 
 [Here is my product video](https://www.youtube.com/watch?v=oIZV762VQAU) 
 
-#### User Interface:
+### User Interface:
 Homescreen of the app | Gameplay | Selection | Scores
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://github.com/moez-baksi/EindProject/blob/master/doc/HomeScreen.png" width="350" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/Tutoriall.gif" width="350" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/selection.png" width="350" height="400" /> |<img src="https://github.com/moez-baksi/EindProject/blob/master/doc/Scores.png" width="350" height="400" />   
 
 
-#### API's, external data sources and special thanks to:
+### API's, external data sources and special thanks to:
   * [Pokemon API](https://pokeapi.co) <sub><sup>© 2013–2018 Paul Hallet and PokéAPI contributors. Pokémon are trademarks of Nintendo.</sup></sub>
   * [Google Maps API](https://cloud.google.com/maps-platform/) <sub><sup>Licensed under the Apache License, Version 2.0</sup></sub>
   
@@ -30,7 +30,7 @@ Homescreen of the app | Gameplay | Selection | Scores
   * [Minor Programmeren](http://www.mprog.nl/)
   * [Stack Overflow](https://stackoverflow.com/)
   
-#### About
+### About:
 
 ###### [Copyright (c) 2019 Moezammin Baksi](https://github.com/moez-baksi/EindProject/blob/master/LICENSE)
 
