@@ -16,9 +16,11 @@ This application is designed to help children learn and enjoy learning topograph
   - goScores(), starts up the selection activity.
   - onBackPressed() is a function to disable navigation button.
   
+  
 - ControlActivity: This activity is to explain the user how to play the game and select a region, where the user wanna play its game.
   - onCreate(), this function also sets up the adapter for the spinner and its elements.
   - goStart(), this function checks what the user selected, and starts up the MapsActivity, giving via intent.putExtra the seleccted game mode.
+ 
  
 - MapsActivity: This activity is the activity which is responsible for the whole game, it contains a map fragment, a stop button, a center button, a chronometer, a remaining count and a hint.
   - onCreate(), this function prepares map asynconyous, gets the mode from the intent, sets up the mode specific variables and prepares the hardcoded cities.
@@ -29,14 +31,26 @@ This application is designed to help children learn and enjoy learning topograph
   - goReturn(), this function stops the game.
   - onBackPressed(), this function is to disable navigation button.
   
+  
 - SelectionActivity: this activity lets the user select which results the user wants to see.
   - onCreate(), this function also sets up the adapter for the spinner and its elements.
   - goStart(), this function checks what the user selected in the spinner, and starts up the ScoreActivity, giving via intent.putExtra the selected game mode.
+  
   
 - ScoreActivity: this activity views the resuls of a specific game mode sorted and based on the selected mode.
   - onCreate(), this function gets the score and mode using intent, and puts it in the SQL database. Thereafter all the data entries are requested, and put in a table. 
   - setTableProperties(), this function sets up a textview with the same properties as all the others.
   - onBackPressed(), this function is to disable navigation button.
+  
+
+- Other classes:
+  - City, this class is used to create 'City' variables.
+  - ListCities, this class contains the hardcoded cities.
+  - ModeSpecificVar, this class is used to hold mode specific variables, which are created in the mapsactivity.\
+  - PokeRequest, to handle all the web, volley and callbackstuff with the pokemon API.
+  - Pokemon, this class is used to create 'Pokemon' variables.
+  - Score, this class is used to create 'Score' variables.
+  - ScoreDatabase, this database class handels all the SQL stuff, such as insert() and selectAll()
 
 
 ## Changes:
