@@ -34,9 +34,9 @@ Here is a short description of the activities and their functions.
   - goStart(), this function checks what the user selected in the spinner, and starts up the ScoreActivity, giving via intent.putExtra the selected game mode.
   
 - ScoreActivity: this activity views the resuls of a specific game mode sorted and based on the selected mode.
- - onCreate(), this function gets the score and mode using intent, and puts it in the SQL database. Thereafter all the data entries are requested, and put in a table. 
- - setTableProperties(), this function sets up a textview with the same properties as all the others.
- - onBackPressed(), this function is to disable navigation button.
+  - onCreate(), this function gets the score and mode using intent, and puts it in the SQL database. Thereafter all the data entries are requested, and put in a table. 
+  - setTableProperties(), this function sets up a textview with the same properties as all the others.
+  - onBackPressed(), this function is to disable navigation button.
 
 
 ## Changes:
