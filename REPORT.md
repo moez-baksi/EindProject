@@ -17,7 +17,7 @@ This application is designed to help children learn and enjoy learning topograph
   - onBackPressed() is a function to disable navigation button.
   
   
-- ControlActivity: This activity is to explain the user how to play the game and select a region, where the user wanna play its game.
+- ControlActivity: This activity is to explain the user how to play the game and select a region, where the user want to play its game.
   - onCreate(), this function also sets up the adapter for the spinner and its elements.
   - goStart(), this function checks what the user selected, and starts up the MapsActivity, giving via intent.putExtra the selected game mode.
  
@@ -46,7 +46,7 @@ This application is designed to help children learn and enjoy learning topograph
 - Other classes:
   - City, this class is used to create 'City' variables.
   - ListCities, this class contains the hardcoded cities.
-  - ModeSpecificVar, this class is used to hold mode specific variables, which are created in the mapsactivity.
+  - ModeSpecificVar, this class is used to hold mode specific variables, which are created in the MapsActivity.
   - PokeRequest, to handle all the web, volley and callback stuff with the Pokémon API.
   - Pokémon, this class is used to create 'Pokémon' variables.
   - Score, this class is used to create 'Score' variables.
@@ -97,6 +97,6 @@ A lot of problems were also caused by the Pokémon API. Initially I thought you 
 
 The score activity is also not what I wanted it to be. I feel like the whole screen lacks something, an image for example. But I could not find anything that suited. I chose the way it looks now, because it is simple but effective. 
 
-I mentioned it a couple of times already, but the original plan was to implement the provinces of the Netherlands. After I implemented it, I had a couple of days left, and I decided to implement other regions as well. The cities are now hardcoded, instead of receiving it of an online API. I tried to search for it, but it was hard to find any API in Dutch. After a couple of changes in my code, it is now easy to implement other regions. I demonstrated this by adding not one, but two extra regions. The only time consuming activity is to hardcode all the cities. 
+I mentioned it a couple of times already, but the original plan was to implement the provinces of the Netherlands. After I implemented it, I had a couple of days left, and I decided to implement other regions as well. The cities are now hardcoded, instead of receiving it of an online API. I tried to search for it, but it was hard to find any API in Dutch. After a couple of changes in my code, it is now easy to implement other regions. I demonstrated this by adding not one, but two extra regions. The only time-consuming activity is to hardcode all the cities. 
 
-If I had more time, I think I would have implemented a lot more regions. Also, an option to combine multiple regions would have been awesome. Thereby, I also would have wanted an online database for the scores, so you cannot lose your progress if you lost your phone. Also, a fun idea would have been an options menu, where you could select if you wanted labels, or select which Pokémon you wanted to play with. But after all I’m really happy with the application I made.
+If I had more time, I think I would have implemented a lot more regions. Also, an option to combine multiple regions would have been awesome. Thereby, I also would have wanted an online database for the scores, so you cannot lose your progress if you lost your phone. Also, a fun idea would have been an options menu, where you could select if you wanted labels, or select which Pokémon you wanted to play with. But after all I’m quite happy with the application I made.
