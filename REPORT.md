@@ -95,7 +95,6 @@ When I started to implement the idea, I stumbled over the map. The API I chose, 
 
 A lot of problems were also caused by the Pokémon API. Initially I thought you would receive an image with the API, but I received an image link. In order to display an image, I had to download it and convert it to bitmap. There is no direct way to do this in android, so I wasted too much time trying to combine standard functions in asynchronous classes. I gave up after a couple of DAYS, and used Picasso instead, which works like a charm. 
 
-The score activity is also not what I wanted it to be. I feel like the whole screen lacks something, an image for example. But I could not find anything that suited. I chose the way it looks now, because it is simple but yet effective. 
+The score activity is also not what I wanted it to be. I feel like the whole screen lacks something, an image for example. But I could not find anything that suited. I chose the way it looks now, because it is simple but effective. 
 
-If I had more time, I think I would have implemented a lot more regions. Also an option to combine multiple regions would have been awesome. Thereby, I also would have wanted an online database for the scores, so you can not lose your progress if you lost your phone. Also a fun idea would have been an options menu, where you could select if you wanted labels, or select which pokemon you wanted to play with. But After all i’m really happy with the application I made.
-
+If I had more time, I think I would have implemented a lot more regions. Also, an option to combine multiple regions would have been awesome. Thereby, I also would have wanted an online database for the scores, so you cannot lose your progress if you lost your phone. Also, a fun idea would have been an options menu, where you could select if you wanted labels, or select which Pokémon you wanted to play with. But after all I’m really happy with the application I made.
